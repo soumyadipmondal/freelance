@@ -1,0 +1,55 @@
+@import "../../site/_variables.scss";
+
+.cmp-informationBox {
+  padding: $mobile-padding-x-small;
+  background-color: $secondary-blue-light;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .cmp-informationBox_icon {
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+    display: block;
+  }
+
+  .cmp-informationBox_block {
+    color: $secondary-blue-dark;
+    font-size: 12px;
+    line-height: 14px;
+
+    .cmp-informationBox_heading {
+      font-weight: 700;
+    }
+
+    .cmp-informationBox_text {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-informationBox {
+
+    .cmp-informationBox_icon {
+      margin-right: 15px;
+    }
+
+    .cmp-informationBox_block {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+
+  .cmp-informationBox {
+
+    .cmp-informationBox_icon {
+      display: none;
+    }
+  }
+}

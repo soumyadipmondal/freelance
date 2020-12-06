@@ -1,0 +1,214 @@
+@import "../../site/_variables.scss";
+
+.cmp-emailModal {
+
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+    h2 {
+      color: $secondary-blue-dark;
+      font-size: 28px;
+      font-weight: 300;
+      text-align: center;
+      margin: 15px 0;
+    }
+  }
+
+  .modal-header {
+    padding: 30px 30px 15px;
+    border-bottom: none;
+
+    .back {
+      color: $primary-blue-light;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    .close {
+      color: $primary-blue-light;
+
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 25px 30px;
+
+    .send_cta {
+      font-size: 14px;
+      font-weight: 500;
+      color: $primary-white;
+      background-color: $secondary-green-dark;
+      text-transform: uppercase;
+      border-radius: 0;
+      padding: 10px 30px;
+      height: 44px;
+
+      &:hover,
+      &:active {
+        background-color: $secondary-green-mid;
+      }
+    }
+  }
+
+  .confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    height: 63px;
+    width: 63px;
+  }
+
+  .message-description {
+
+    p {
+      color: $primary-grey-dark;
+    }
+  }
+
+  .email_wrapper {
+    margin-top: 60px
+  }
+
+  .email_container {
+    display: flex;
+    align-items: center;
+  }
+
+  label {
+    color: $secondary-blue-dark;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .email_block {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: 1px solid $primary-grey-light;
+    border-right: none;
+    background-color: $primary-white;
+    height: 44px;
+
+    >i {
+      color: $primary-blue-light;
+      margin: 0 10px 0 15px;
+    }
+  }
+
+  .border-blue {
+    border-color: $primary-blue-light;
+  }
+
+  .error {
+    border-color: $secondary-red-dark;
+  }
+
+  .email_input {
+    border: none;
+    display: block;
+    width: 100%;
+    outline: none;
+  }
+
+  .email_clear {
+    color: $primary-grey-light;
+    margin: 0 15px 0 10px;
+    display: none;
+  }
+
+  .validation-msg {
+    font-size: 14px;
+    color: $secondary-red-dark;
+    margin-top: 5px;
+  }
+
+  .modal-footer {
+    color: $primary-grey-dark;
+    padding: 25px 30px;
+    justify-content: left;
+    border-top: none;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .email-confirm {
+    display: none;
+
+    .modal-footer {
+      box-shadow: 0 -3px 10px 3px rgba(68, 68, 68, 0.13);
+
+      button {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: $primary-white;
+        background-color: $secondary-green-dark;
+        text-transform: uppercase;
+        padding: 10px 45px;
+        border-radius: 0;
+        margin: 0;
+        height: 50px;
+        width: 100%;
+
+        &:hover,
+        &:active {
+          background-color: $secondary-green-mid;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: ($tablet)-1) {
+
+  .cmp-emailModal {
+
+    .modal-dialog {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0;
+    }
+
+    .modal-content {
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-emailModal {
+
+    .modal-dialog {
+      max-width: 540px;
+    }
+
+    .modal-content {
+      height: 500px;
+
+      h2 {
+        font-size: 42px;
+        line-height: 54px;
+      }
+    }
+
+    .validation-msg {
+      font-size: 16px;
+    }
+  }
+}

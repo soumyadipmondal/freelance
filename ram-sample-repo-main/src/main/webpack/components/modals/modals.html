@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>modals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="modals">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                    data-target="#leavePageModal">
+                    Leave Page modal
+                </button>
+                <!-- Component HTML Goes here -->
+                <div id="leavePageModal" class="modal fade generic-modal" tabindex="-1" role="dialog"
+                    aria-hidden="false">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 id="leaveSOBLabel">Leaving Search Online Benefits section</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i class="fal fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Please note that you're leaving the SOB section of your online account.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="BCNHBCancel" class="cta-mid gaTrackElement" type="button"
+                                    data-dismiss="modal" aria-label="Cancel and stay here">Cancel</button>
+                                <a id="leavePage" class="cta-mid-green gaTrackElement" type="button" href="">Ok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

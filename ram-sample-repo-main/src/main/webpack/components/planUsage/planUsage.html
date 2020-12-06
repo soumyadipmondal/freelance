@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>cmp-planUsage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="container responsivegrid">
+                <div class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                        <div class="planUsage aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-planUsage">
+                                <div class="cmp-planUsage_main-description">
+                                    Viewing plan usage for <strong>Jane's ACL Reconstruction Surgery</strong> at
+                                    <strong>Beaumont Hospital, Troy</strong>
+                                </div>
+                                <h4>Individual Plan Usage</h4>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary">
+                                        <input class="before-plan-usage" type="radio" name="plan-usage">Before
+                                    </label>
+                                    <label class="btn btn-secondary active">
+                                        <input class="after-plan-usage" type="radio" name="plan-usage" checked>After
+                                    </label>
+                                </div>
+
+                                <!-- Plan Usage scenario -->
+                                <div class="cmp-planUsage_progressbar">
+                                    <div class="progress" tabindex="0">
+                                        <div class="sr-only">
+                                            You’ve paid $1,500 of $3,000 deductible and $1,500 of $8,000 out-of-pocket
+                                            max.
+                                        </div>
+                                        <div class="sr-only">
+                                            At the end of this service you will have paid $2,500 of $3,000 deductible
+                                            and $2,500 of $8,000 out-of-pocket max.
+                                        </div>
+                                        <div class="progress-bar deductible-before" role="progressbar"
+                                            style="width: 18.75%" aria-hidden="true">
+                                            <span class="tool-tip">$1,500</span>
+                                        </div>
+                                        <div class="progress-bar deductible-after" role="progressbar"
+                                            style="max-width: 12.5%" aria-hidden="true">
+                                            <span class="tool-tip">$2,500</span>
+                                        </div>
+                                        <span class="indicator deductible">
+                                            <i class="fal fa-circle"></i>
+                                            <span class="deductible-indicator-text">
+                                                Deductible: $3,000
+                                            </span>
+                                        </span>
+                                        <span class="indicator oopm">
+                                            <i class="fal fa-circle"></i>
+                                            <span class="oopm-indicator-text">
+                                                Out-of-Pocket Max: $8,000
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="underlay">
+                                        <span class="deductible-cost">
+                                            <span class="you-pay-text">You pay 100% of cost</span>
+                                        </span>
+                                        <span class="coinsurance" style="visibility: hidden">
+                                            <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                        </span>
+                                        <span class="over-oopm" style="visibility: hidden">
+                                            <span class="gradient-bar" style="visibility: visible"></span>
+                                            <span class="you-no-pay-text">You pay 0% of cost</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="cmp-planUsage_progressbar">
+                                    <div class="progress" tabindex="0">
+                                        <div class="sr-only">
+                                            You’ve paid $2,000 of $3,000 deductible and $2,000 of $8,000 out-of-pocket
+                                            max.
+                                        </div>
+                                        <div class="sr-only">
+                                            At the end of this service you will have paid $3,000 of $3,000 deductible
+                                            and $3,000 of $8,000 out-of-pocket max.
+                                        </div>
+                                        <div class="progress-bar deductible-before" role="progressbar"
+                                            style="width: 25%" aria-hidden="true">
+                                            <span class="tool-tip">$2,000</span>
+                                        </div>
+                                        <div class="progress-bar deductible-after" role="progressbar"
+                                            style="max-width: 12.5%" aria-hidden="true">
+                                            <span class="tool-tip">$3,000</span>
+                                        </div>
+                                        <span class="indicator deductible deductible-met">
+                                            <i class="fal fa-check-circle"></i>
+                                            <span class="deductible-indicator-text">
+                                                <i class="fas fa-check"></i>
+                                                Deductible met: $3,000
+                                            </span>
+                                        </span>
+                                        <span class="indicator oopm">
+                                            <i class="fal fa-circle"></i>
+                                            <span class="oopm-indicator-text">
+                                                Out-of-Pocket Max: $8,000
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="underlay">
+                                        <span class="deductible-cost" style="visibility: hidden">
+                                            <span class="you-pay-text">You pay 100% of cost</span>
+                                        </span>
+                                        <span class="coinsurance">
+                                            <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                        </span>
+                                        <span class="over-oopm" style="visibility: hidden">
+                                            <span class="gradient-bar" style="visibility: visible"></span>
+                                            <span class="you-no-pay-text">You pay 0% of cost</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="cmp-planUsage_progressbar">
+                                    <div class="progress" tabindex="0">
+                                        <div class="sr-only">
+                                            You’ve paid $3,000 of $3,000 deductible and $4,500 of $8,000 out-of-pocket
+                                            max.
+                                        </div>
+                                        <div class="sr-only">
+                                            At the end of this service you will have paid $3,000 of $3,000 deductible
+                                            and $5,500 of $8,000 out-of-pocket max.
+                                        </div>
+                                        <div class="progress-bar deductible-before" role="progressbar"
+                                            style="width: 37.5%" aria-hidden="true">
+                                            <span class="tool-tip" style="display: none;">$3,000</span>
+                                        </div>
+                                        <div class="progress-bar deductible-after" role="progressbar"
+                                            style="max-width: 0" aria-hidden="true">
+                                            <span class="tool-tip" style="display: none;">$3,000</span>
+                                        </div>
+                                        <div class="progress-bar oopm-before" role="progressbar" style="width: 18.75%"
+                                            aria-hidden="true">
+                                            <span class="tool-tip">$4,500</span>
+                                        </div>
+                                        <div class="progress-bar oopm-after" role="progressbar" style="max-width: 12.5%"
+                                            aria-hidden="true">
+                                            <span class="tool-tip">$5,500</span>
+                                        </div>
+                                        <span class="indicator deductible deductible-passed">
+                                            <i class="fal fa-circle"></i>
+                                            <span class="deductible-indicator-text">
+                                                <i class="fas fa-check"></i>
+                                                Deductible met: $3,000
+                                            </span>
+                                        </span>
+                                        <span class="indicator oopm">
+                                            <i class="fal fa-circle"></i>
+                                            <span class="oopm-indicator-text">
+                                                Out-of-Pocket Max: $8,000
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="underlay">
+                                        <span class="deductible-cost" style="visibility: hidden">
+                                            <span class="you-pay-text">You pay 100% of cost</span>
+                                        </span>
+                                        <span class="coinsurance">
+                                            <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                        </span>
+                                        <span class="over-oopm" style="visibility: hidden">
+                                            <span class="gradient-bar" style="visibility: visible"></span>
+                                            <span class="you-no-pay-text">You pay 0% of cost</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="cmp-planUsage_progressbar">
+                                    <div class="progress" tabindex="0">
+                                        <div class="sr-only">
+                                            You’ve paid $3,000 of $3,000 deductible and $5,000 of $8,000 out-of-pocket
+                                            max.
+                                        </div>
+                                        <div class="sr-only">
+                                            At the end of this service you will have paid $3,000 of $3,000 deductible
+                                            and $8,000 of $8,000 out-of-pocket max.
+                                        </div>
+                                        <div class="progress-bar deductible-before" role="progressbar"
+                                            style="width: 37.5%" aria-hidden="true">
+                                            <span class="tool-tip" style="display: none;">$3,000</span>
+                                        </div>
+                                        <div class="progress-bar deductible-after" role="progressbar"
+                                            style="max-width: 0" aria-hidden="true">
+                                            <span class="tool-tip" style="display: none;">$3,000</span>
+                                        </div>
+                                        <div class="progress-bar oopm-before" role="progressbar" style="width: 25%"
+                                            aria-hidden="true">
+                                            <span class="tool-tip">$5,000</span>
+                                        </div>
+                                        <div class="progress-bar oopm-after" role="progressbar" style="max-width: 37.5%"
+                                            aria-hidden="true">
+                                            <span class="tool-tip">$8,000</span>
+                                        </div>
+                                        <span class="indicator deductible deductible-passed">
+                                            <i class="fal fa-circle"></i>
+                                            <span class="deductible-indicator-text">
+                                                <i class="fas fa-check"></i>
+                                                Deductible met: $3,000
+                                            </span>
+                                        </span>
+                                        <span class="indicator oopm oopm-met">
+                                            <i class="fal fa-check-circle"></i>
+                                            <span class="oopm-indicator-text">
+                                                <i class="fas fa-check"></i>
+                                                Out-of-Pocket Max met: $8,000
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="underlay">
+                                        <span class="deductible-cost" style="visibility: hidden">
+                                            <span class="you-pay-text">You pay 100% of cost</span>
+                                        </span>
+                                        <span class="coinsurance" style="visibility: hidden">
+                                            <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                        </span>
+                                        <span class="over-oopm">
+                                            <span class="gradient-bar"></span>
+                                            <span class="you-no-pay-text">You pay 0% of cost</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <h6>Applied to this service</h6>
+                                <div class="cmp-planUsage_progressbar-legends">
+                                    <div class="cmp-planUsage_progressbar-legend-deductible-paid-to-service">
+                                        <div class="legend"></div>
+                                        <div>
+                                            <div class="legend-heading">
+                                                Deductible: $1,500 will be applied with this service
+                                            </div>
+                                            <div class="legend-description">
+                                                At the end of this service you will have paid $2,000 of your $3,000
+                                                deductible.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-planUsage_progressbar-legend-oopm-paid-to-service">
+                                        <div class="legend"></div>
+                                        <div>
+                                            <div class="legend-heading">
+                                                Out-of-Pocket Max: $1,500 will be applied with this service
+                                            </div>
+                                            <div class="legend-description">
+                                                At the end of this service you will have paid $2,000 of your $8,000
+                                                out-of-pocket maximum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6>Paid this year to date</h6>
+                                <div class="cmp-planUsage_progressbar-legends">
+                                    <div class="cmp-planUsage_progressbar-legend-deductible-paid-this-year">
+                                        <div class="legend"></div>
+                                        <div>
+                                            <div class="legend-heading">
+                                                $500 of $3,000 Deductible
+                                            </div>
+                                            <div class="legend-description">
+                                                You've paid $500 of your $3,000 deductible for the current benefit year.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-planUsage_progressbar-legend-oopm-paid-this-year">
+                                        <div class="legend"></div>
+                                        <div>
+                                            <div class="legend-heading">
+                                                $500 of $8,000 Out-of-Pocket Max
+                                            </div>
+                                            <div class="legend-description">
+                                                You've paid $500 of your $8,000 out-of-pocket maximum for the current
+                                                benefit year.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="plan-usage-notification deductible">
+                                    <i class="fal fa-check-circle" aria-hidden="true"></i>
+                                    <div class="notification_description">
+                                        <p>
+                                            At the end of this service during the current benefit year, you would meet
+                                            Jane's $3,000 deductible subject to any pre-authorization required.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="plan-usage-notification oopm">
+                                    <i class="fal fa-check-circle" aria-hidden="true"></i>
+                                    <div class="notification_description">
+                                        <p>
+                                            At the end of this service during the current benefit year, you would meet
+                                            Jane's $5,000 out-of-pocket maximum subject to any pre-authorization
+                                            required.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <script>
+                                $(document).ready(() => {
+                                    const deductibleIndicatorPosition = ((37.5 / 100) * $('.progress')
+                                    .width()) - 10;
+                                    const oopmIndicatorPosition = ($('.progress').width()) - 10;
+
+                                    $('.indicator.deductible').css('left', deductibleIndicatorPosition);
+                                    $('.indicator.oopm').css('left', oopmIndicatorPosition);
+
+                                    const deductibleAfterTooltipWidth = -$('.deductible-before .tool-tip')
+                                        .outerWidth();
+
+                                    $('.deductible-before .tool-tip').css('right', deductibleAfterTooltipWidth);
+
+                                    $('.deductible-cost').css('width', 37.5 + '%');
+                                    $('.coinsurance').css('width', 62.5 + '%');
+
+                                    const deductibleUnderlayWidth = $('.deductible-cost').width();
+                                    const coinsuranceUnderlayWidth = $('.coinsurance').width();
+                                    const totalWidth = deductibleUnderlayWidth + coinsuranceUnderlayWidth;
+                                    const deductiblePercent = (100 * deductibleUnderlayWidth / totalWidth)
+                                        .toFixed(2);
+                                    const coinsurancePercent = (100 * coinsuranceUnderlayWidth / totalWidth)
+                                        .toFixed(2);
+
+                                    if (deductiblePercent < 15) {
+                                        $('.you-pay-text').hide();
+                                    }
+                                    if (coinsurancePercent < 25) {
+                                        $('.coinsurance-text').hide();
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

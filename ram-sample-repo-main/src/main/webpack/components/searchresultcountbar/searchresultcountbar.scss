@@ -1,0 +1,52 @@
+@import "../../site/_variables.scss";
+
+.cmp-searchresultcountbar {
+
+  .cmp-searchresultcountbar_block {
+    max-width: $container-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $mobile-padding-x-small $mobile-padding-x-small;
+
+    i {
+      color: $primary-blue-light;
+      padding-right: $mobile-padding-x-small;
+    }
+
+    .cmp-searchresultcountbar__text {
+      font-weight: 400;
+      margin-bottom: 0;
+
+      .cmp-searchresultcountbar__dynamic-text {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-searchresultcountbar {
+    margin-left: auto;
+    margin-right: auto;
+
+    .cmp-searchresultcountbar_block {
+      padding-right: $mobile-padding-small;
+      padding-left: $mobile-padding-small;
+    }
+  }
+}
+
+@media (min-width: $desktop+1) {
+
+  .cmp-searchresultcountbar {
+
+    .cmp-searchresultcountbar_block {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

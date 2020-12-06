@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>cmp-emailModal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="container responsivegrid">
+                <div class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                        <div class="emailModal aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-emailModal">
+                                <!-- Ignore Button trigger while integrating -->
+                                <button type="button" class="cta-mid" data-toggle="modal" data-target=".email-modal">
+                                    Email
+                                </button>
+
+                                <div class="modal fade email-modal" tabindex="-1" aria-labelledby="emailModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content email">
+                                            <div class="modal-header">
+                                                <h2>Email your estimate</h2>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <i class="fal fa-times"></i>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="message-description">
+                                                    <p>
+                                                        Verify your email below and click send to get an email estimate:
+                                                    </p>
+                                                </div>
+                                                <div class="email_wrapper">
+                                                    <label>
+                                                        Email Address
+                                                    </label>
+                                                    <div class="email_container">
+                                                        <div class="email_block">
+                                                            <i class="fal fa-envelope" aria-hidden="true"></i>
+                                                            <input class="email_input" type="email"
+                                                                   name="email" aria-label="Email Address"
+                                                                   placeholder="Enter email address">
+                                                            <button class="email_clear"
+                                                                    aria-label="Clear your email text">
+                                                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                                            </button>
+                                                        </div>
+                                                        <button class="send_cta" name="send_cta" aria-disabled="true" data-toggle="modal" data-target=".email-confirm-modal">
+                                                            Send
+                                                        </button>
+                                                    </div>
+                                                    <div class="validation-msg">
+                                                        Please enter a valid address
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <p>
+                                                    Or, <a href="#">download a PDF</a> of you estimate to save or print.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-content email-confirm">
+                                            <div class="modal-header">
+                                                <button type="button" class="back" aria-label="back">
+                                                    <i class="fal fa-arrow-left" aria-hidden="true"></i>Back
+                                                </button>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Click to close Email modal">
+                                                    <i class="fal fa-times"></i>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="confirm">
+                                                    <img src="./static/images/Covered_Icon_THIN_2x.png"
+                                                         alt="Confirmation Image" />
+                                                    <h2>
+                                                        Email sent to:<br>
+                                                        [xxxxxx@xxxx.xxx]
+                                                    </h2>
+                                                </div>
+                                                <div class="message-description">
+                                                    <p>
+                                                        Din't get the email? Go back to check the email address you entered or try again.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="done" type="button" data-dismiss="modal" aria-label="Close">Done</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

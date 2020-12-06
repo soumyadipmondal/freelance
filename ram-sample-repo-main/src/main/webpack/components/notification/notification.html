@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>cmp-notification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="container responsivegrid">
+                <div class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                        <div class="notification aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-notification referral">
+                                <div class="cmp-notification_block">
+                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <div class="cmp-text__paragraph">
+                                        <p>
+                                            A <span class="popover-text">referral</span> is
+                                            required for an ACL Reconstruction Surgery at Beaumont Hospital, Troy.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <div class="notification aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-notification cob">
+                                <div class="cmp-notification_block">
+                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <div class="cmp-text__paragraph">
+                                        <p>
+                                            Blue Cross Blue Shield is your secondary coverage.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <div class="notification aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-notification osc">
+                                <div class="cmp-notification_block">
+                                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                    <div class="cmp-text__paragraph">
+                                        <p>
+                                            OSC Level 1 - Your results have been filtered to show providers that belong
+                                            to your Organized System of Care (OSC). <a href="#">Don't want to see the
+                                                best choices? Show all.</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <div class="notification aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-notification lifeTimeMax">
+                                <div class="cmp-notification_block">
+                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <div class="cmp-text__paragraph">
+                                        <p>
+                                            You have reached the lifetime limit of $1,000,000. This means either coverage may have ended or your plan will have a limited benefits in upcoming years.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <script>
+                            $('.popover-text').attr({
+                                tabindex: '0',
+                                'data-toggle': 'popover',
+                                'data-placement': 'bottom',
+                                'data-trigger': 'focus'
+                            }).popover({
+                                content: '<div class="popover-content" tabindex="0">\n' +
+                                    'For this service to be covered by your plan, a referral will be required from your PCP.<br>\n' +
+                                    'See your <a href="#">Referrals and Pre-Authorizations</a>.\n' +
+                                    '</div>',
+                                html: true
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+@import "../../site/_variables.scss";
+
+.cmp-estimatedCostOverview {
+  background-color: $secondary-blue-dark;
+  padding: $mobile-padding-medium $mobile-padding-x-small;
+
+  .cmp-estimatedCostOverview_container {
+    background-color: $primary-white;
+    max-width: $container-max-width;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+
+    .col-sm-12 {
+      text-align: center;
+      padding: $mobile-padding-small;
+      height: 220px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $primary-grey-light;
+      }
+    }
+  }
+
+  h2 {
+    color: $primary-blue-light;
+    font-weight: 400;
+    margin: 0;
+    font-size: 42px;
+
+    &.not-covered {
+      color: #b12a00;
+    }
+  }
+
+  .cmp-procedureCoverage_block {
+    text-align: center;
+    padding: $mobile-padding-small;
+  }
+
+  .cmp-procedureCoverage_icon {
+    margin-bottom: 20px;
+
+    img {
+      height: 63px;
+      width: 63px;
+    }
+  }
+
+  .cmp-text__paragraph {
+
+    p {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 5px;
+      }
+
+      .disclaimer {
+        font-size: 12px;
+        line-height: 18px;
+        color: $primary-grey-dark;
+      }
+    }
+  }
+
+  .cmp-procedureMemberPay_heading {
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .cmp-procedureMemberPay_metrics {
+    margin: 20px 0;
+  }
+
+  .cmp-procedureInsurancePay_heading {
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .cmp-procedureInsurancePay_metrics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+    i {
+      color: $secondary-orange;
+      font-size: 24px;
+      line-height: 40px;
+      margin-right: 10px;
+    }
+  }
+
+  .show-more {
+    color: $primary-white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    background-color: $primary-blue-light;
+    width: 100%;
+
+    .show-text {
+      display: block;
+    }
+
+    .hide-text {
+      display: none;
+    }
+
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  .save-estimate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: $secondary-blue-dark;
+    padding-top: $mobile-padding-small;
+
+    button:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .cost-explanation {
+    overflow-y: auto;
+    max-height: 1000px;
+    height: 100%;
+    display: none;
+
+    .container {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-estimatedCostOverview {
+    padding-right: $mobile-padding-small;
+    padding-left: $mobile-padding-small;
+
+    .row {
+
+      .col-md-6 {
+
+        &:not(:last-child) {
+          border-right: 1px solid $primary-grey-light;
+          border-bottom: none;
+        }
+      }
+
+      .col-md-12 {
+        border-bottom: 1px solid $primary-grey-light;
+      }
+    }
+  }
+}
+
+@media (max-width: ($desktop)-1) and (min-width: $tablet) {
+
+  .cmp-estimatedCostOverview {
+
+    .row {
+
+      .col-md-12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+
+        .cmp-text__paragraph {
+          text-align: left;
+
+          p {
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .cmp-procedureCoverage_icon {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .cmp-estimatedCostOverview {
+
+    .row {
+
+      .col-lg-4 {
+
+        &:not(:last-child) {
+          border-right: 1px solid $primary-grey-light;
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

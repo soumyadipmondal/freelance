@@ -1,0 +1,904 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>cmp-estimatedCostOverview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="container responsivegrid">
+                <div class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+
+                        <!-- Not Covered Scenario -->
+                        <div class="estimatedCostOverview aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-estimatedCostOverview">
+                                <div class="cmp-estimatedCostOverview_container container-fluid">
+                                    <div class="row">
+                                        <div class="cmp-procedureCoverage_block col-sm-12 col-md-12 col-lg-4">
+                                            <div class="cmp-procedureCoverage_icon">
+                                                <img src="./static/images/Not_Covered_Icon_THIN_2x.png"
+                                                    alt="Not Covered Icon" />
+                                            </div>
+                                            <div class="cmp-text__paragraph">
+                                                <p>This procedure is not a benefit of your insurance*</p>
+                                                <p>
+                                                    <span class="disclaimer">*Exceptions may apply</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-procedureMemberPay_block col-sm-12 col-md-6 col-lg-4">
+                                            <h4 class="cmp-procedureMemberPay_heading">
+                                                You pay
+                                            </h4>
+                                            <div class="cmp-procedureMemberPay_metrics">
+                                                <h2>$1,256</h2>
+                                            </div>
+                                            <div class="cmp-text__paragraph">
+                                                <p>
+                                                    <span class="disclaimer">Estimated cost from check-in to
+                                                        check-out.<br>
+                                                        Actual cost may vary.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-procedureInsurancePay_block col-sm-12 col-md-6 col-lg-4">
+                                            <h4 class="cmp-procedureInsurancePay_heading">
+                                                We pay
+                                            </h4>
+                                            <div class="cmp-procedureInsurancePay_metrics">
+                                                <h2>$0</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="show-more">
+                                        <span class="show-text">Show Cost Explanation</span>
+                                        <span class="hide-text">Hide Cost Explanation</span>
+                                        <i class="fal fa-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="cost-explanation" style="display: block">
+
+                                        <!--Parsys-->
+                                        <div
+                                            class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                                            <div class="cmp-container">
+                                                <div class="tabs">
+                                                    <div class="cmp-tabs">
+                                                        <ol role="tablist" class="cmp-tabs__tablist"
+                                                            aria-multiselectable="false">
+                                                            <li role="tab" class="cmp-tabs__tab cmp-tabs__tab--active"
+                                                                tabindex="0" data-cmp-hook-tabs="tab"
+                                                                aria-selected="true">Cost Explanation
+                                                            </li>
+                                                            <li role="tab" class="cmp-tabs__tab" tabindex="-1"
+                                                                data-cmp-hook-tabs="tab" aria-selected="false">Plan
+                                                                Usage
+                                                            </li>
+                                                        </ol>
+                                                        <div role="tabpanel" tabindex="0"
+                                                            class="cmp-tabs__tabpanel cmp-tabs__tabpanel--active"
+                                                            data-cmp-hook-tabs="tabpanel">
+                                                            <div class="container responsivegrid">
+                                                                <div class="cmp-container">
+
+                                                                    <div class="planUsage aem-GridColumn aem-GridColumn--default--12">
+
+                                                                        <!-- Component HTML Goes here -->
+                                                                        <section class="cmp-planUsage">
+                                                                            <div class="cmp-planUsage_main-description">
+                                                                                Viewing plan usage for <strong>Jane's ACL Reconstruction Surgery</strong> at <strong>Beaumont Hospital, Troy</strong>
+                                                                            </div>
+                                                                            <h4>Individual Plan Usage</h4>
+                                                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                                                <label class="btn btn-secondary">
+                                                                                    <input class="before-plan-usage" type="radio" name="plan-usage">Before
+                                                                                </label>
+                                                                                <label class="btn btn-secondary active">
+                                                                                    <input class="after-plan-usage" type="radio" name="plan-usage" checked>After
+                                                                                </label>
+                                                                            </div>
+
+                                                                            <!-- Plan Usage scenario -->
+                                                                            <div class="cmp-planUsage_progressbar">
+                                                                                <div class="progress" tabindex="0">
+                                                                                    <div class="sr-only">
+                                                                                        Plan Usage paid $2,000 before procedure and $2,500
+                                                                                        after procedure of Plan Usage limit $8,000.
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-before" role="progressbar" style="width: 18.75%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$1,500</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-after" role="progressbar" style="max-width: 12.5%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$2,500</span>
+                                                                                    </div>
+                                                                                    <span class="indicator deductible">
+                                        <i class="fal fa-circle"></i>
+                                        <span class="deductible-indicator-text">
+                                            Deductible: $3,000
+                                        </span>
+                                    </span>
+                                                                                    <span class="indicator oopm">
+                                        <i class="fal fa-circle"></i>
+                                        <span class="oopm-indicator-text">
+                                            Out-of-Pocket Max: $8,000
+                                        </span>
+                                    </span>
+                                                                                </div>
+                                                                                <div class="underlay">
+                                    <span class="deductible-cost" style="width: 37.5%;">
+                                        <span class="you-pay-text">You pay 100% of cost</span>
+                                    </span>
+                                                                                    <span class="coinsurance" style="width: 62.5%; visibility: hidden">
+                                        <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                    </span>
+                                                                                    <span class="over-oopm" style="visibility: hidden">
+                                        <span class="gradient-bar" style="visibility: visible"></span>
+                                        <span class="you-no-pay-text">You pay 0% of cost</span>
+                                    </span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="cmp-planUsage_progressbar">
+                                                                                <div class="progress" tabindex="0">
+                                                                                    <div class="sr-only">
+                                                                                        Plan Usage paid $2,000 before procedure and $2,500
+                                                                                        after procedure of Plan Usage limit $8,000.
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-before" role="progressbar" style="width: 25%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$2,000</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-after" role="progressbar" style="max-width: 12.5%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$3,000</span>
+                                                                                    </div>
+                                                                                    <span class="indicator deductible deductible-met">
+                                        <i class="fal fa-check-circle"></i>
+                                        <span class="deductible-indicator-text">
+                                            <i class="fas fa-check"></i>
+                                            Deductible met: $3,000
+                                        </span>
+                                    </span>
+                                                                                    <span class="indicator oopm">
+                                        <i class="fal fa-circle"></i>
+                                        <span class="oopm-indicator-text">
+                                            Out-of-Pocket Max: $8,000
+                                        </span>
+                                    </span>
+                                                                                </div>
+                                                                                <div class="underlay">
+                                    <span class="deductible-cost" style="width: 37.5%; visibility: hidden">
+                                        <span class="you-pay-text">You pay 100% of cost</span>
+                                    </span>
+                                                                                    <span class="coinsurance" style="width: 62.5%;">
+                                        <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                    </span>
+                                                                                    <span class="over-oopm" style="visibility: hidden">
+                                        <span class="gradient-bar" style="visibility: visible"></span>
+                                        <span class="you-no-pay-text">You pay 0% of cost</span>
+                                    </span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="cmp-planUsage_progressbar">
+                                                                                <div class="progress" tabindex="0">
+                                                                                    <div class="sr-only">
+                                                                                        Plan Usage paid $2,000 before procedure and $2,500
+                                                                                        after procedure of Plan Usage limit $8,000.
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-before" role="progressbar" style="width: 37.5%" aria-hidden="true">
+                                                                                        <span class="tool-tip" style="display: none;">$3,000</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-after" role="progressbar" style="max-width: 0%" aria-hidden="true">
+                                                                                        <span class="tool-tip" style="display: none;">$3,000</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar oopm-before" role="progressbar" style="width: 18.75%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$4,500</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar oopm-after" role="progressbar" style="max-width: 12.5%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$5,500</span>
+                                                                                    </div>
+                                                                                    <span class="indicator deductible deductible-passed">
+                                        <i class="fal fa-circle"></i>
+                                        <span class="deductible-indicator-text">
+                                            <i class="fas fa-check"></i>
+                                            Deductible met: $3,000
+                                        </span>
+                                    </span>
+                                                                                    <span class="indicator oopm">
+                                        <i class="fal fa-circle"></i>
+                                        <span class="oopm-indicator-text">
+                                            Out-of-Pocket Max: $8,000
+                                        </span>
+                                    </span>
+                                                                                </div>
+                                                                                <div class="underlay">
+                                    <span class="deductible-cost" style="width: 37.5%; visibility: hidden">
+                                        <span class="you-pay-text">You pay 100% of cost</span>
+                                    </span>
+                                                                                    <span class="coinsurance" style="width: 62.5%;">
+                                        <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                    </span>
+                                                                                    <span class="over-oopm" style="visibility: hidden">
+                                        <span class="gradient-bar" style="visibility: visible"></span>
+                                        <span class="you-no-pay-text">You pay 0% of cost</span>
+                                    </span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="cmp-planUsage_progressbar">
+                                                                                <div class="progress" tabindex="0">
+                                                                                    <div class="sr-only">
+                                                                                        Plan Usage paid $2,000 before procedure and $2,500
+                                                                                        after procedure of Plan Usage limit $8,000.
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-before" role="progressbar" style="width: 37.5%" aria-hidden="true">
+                                                                                        <span class="tool-tip" style="display: none;">$3,000</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar deductible-after" role="progressbar" style="max-width: 0%" aria-hidden="true">
+                                                                                        <span class="tool-tip" style="display: none;">$3,000</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar oopm-before" role="progressbar" style="width: 25%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$5,000</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar oopm-after" role="progressbar" style="max-width: 37.5%" aria-hidden="true">
+                                                                                        <span class="tool-tip">$8,000</span>
+                                                                                    </div>
+                                                                                    <span class="indicator deductible deductible-passed">
+                                        <i class="fal fa-circle"></i>
+                                        <span class="deductible-indicator-text">
+                                            <i class="fas fa-check"></i>
+                                            Deductible met: $3,000
+                                        </span>
+                                    </span>
+                                                                                    <span class="indicator oopm oopm-met">
+                                        <i class="fal fa-check-circle"></i>
+                                        <span class="oopm-indicator-text">
+                                            <i class="fas fa-check"></i>
+                                            Out-of-Pocket Max met: $8,000
+                                        </span>
+                                    </span>
+                                                                                </div>
+                                                                                <div class="underlay">
+                                    <span class="deductible-cost" style="width: 37.5%; visibility: hidden">
+                                        <span class="you-pay-text">You pay 100% of cost</span>
+                                    </span>
+                                                                                    <span class="coinsurance" style="width: 62.5%; visibility: hidden">
+                                        <span class="coinsurance-text">Coinsurance: You pay 20% of cost</span>
+                                    </span>
+                                                                                    <span class="over-oopm">
+                                        <span class="gradient-bar"></span>
+                                        <span class="you-no-pay-text">You pay 0% of cost</span>
+                                    </span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <h6>Applied to this service</h6>
+                                                                            <div class="cmp-planUsage_progressbar-legends">
+                                                                                <div class="cmp-planUsage_progressbar-legend-deductible-paid-to-service">
+                                                                                    <div class="legend"></div>
+                                                                                    <div>
+                                                                                        <div class="legend-heading">
+                                                                                            Deductible: $1,500 will be applied with this service
+                                                                                        </div>
+                                                                                        <div class="legend-description">
+                                                                                            At the end of this service you will have paid $2,000 of your $3,000 deductible.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="cmp-planUsage_progressbar-legend-oopm-paid-to-service">
+                                                                                    <div class="legend"></div>
+                                                                                    <div>
+                                                                                        <div class="legend-heading">
+                                                                                            Out-of-Pocket Max: $1,500 will be applied with this service
+                                                                                        </div>
+                                                                                        <div class="legend-description">
+                                                                                            At the end of this service you will have paid $2,000 of your $8,000 out-of-pocket maximum.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <h6>Paid this year to date</h6>
+                                                                            <div class="cmp-planUsage_progressbar-legends">
+                                                                                <div class="cmp-planUsage_progressbar-legend-deductible-paid-this-year">
+                                                                                    <div class="legend"></div>
+                                                                                    <div>
+                                                                                        <div class="legend-heading">
+                                                                                            $500 of $3,000 Deductible
+                                                                                        </div>
+                                                                                        <div class="legend-description">
+                                                                                            You've paid $500 of your $3,000 deductible for the current benefit year.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="cmp-planUsage_progressbar-legend-oopm-paid-this-year">
+                                                                                    <div class="legend"></div>
+                                                                                    <div>
+                                                                                        <div class="legend-heading">
+                                                                                            $500 of $8,000 Out-of-Pocket Max
+                                                                                        </div>
+                                                                                        <div class="legend-description">
+                                                                                            You've paid $500 of your $8,000 out-of-pocket maximum for the current benefit year.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="plan-usage-notification deductible">
+                                                                                <i class="fal fa-check-circle" aria-hidden="true"></i>
+                                                                                <div class="notification_description">
+                                                                                    <p>
+                                                                                        At the end of this service during the current benefit year, you would meet Jane's $3,000 deductible subject to any pre-authorization required.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="plan-usage-notification oopm">
+                                                                                <i class="fal fa-check-circle" aria-hidden="true"></i>
+                                                                                <div class="notification_description">
+                                                                                    <p>
+                                                                                        At the end of this service during the current benefit year, you would meet Jane's $5,000 out-of-pocket maximum subject to any pre-authorization required.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </section>
+
+                                                                        <script>
+                                                                            $(document).ready(function () {
+                                                                                const deductibleIndicatorPosition = (0.375*$('.progress').width())-10;
+                                                                                const oopmIndicatorPosition = ($('.progress').width())-10;
+
+                                                                                $('.indicator.deductible').css('left', deductibleIndicatorPosition);
+                                                                                $('.indicator.oopm').css('left', oopmIndicatorPosition);
+                                                                            });
+                                                                        </script>
+                                                                    </div>
+
+                                                                    <!-- Not Covered Scenario -->
+                                                                    <div
+                                                                        class="costExplanation aem-GridColumn aem-GridColumn--default--12">
+
+                                                                        <!-- Component HTML Goes here -->
+                                                                        <section class="cmp-costExplanation">
+
+                                                                            <div class="cmp-costExplanation_progressbar">
+                                                                                <div class="progress" tabindex="0">
+                                                                                    <div class="sr-only">You pay $1,256 and we pay $33,451 of total $34,707 surgery
+                                                                                        cost.
+                                                                                    </div>
+                                                                                    <div class="progress-bar you-pay" role="progressbar"
+                                                                                         aria-hidden="true">
+                                                                                        <span class="tool-tip you-pay">$1,256</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar we-pay" role="progressbar"
+                                                                                         aria-hidden="true">
+                                                                                        <div class="tool-tip we-pay">$33,451</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <script>
+                                                                                $(document).ready(function(){
+                                                                                    const youPayProgressBarWidth = 15,
+                                                                                        youPayTooltipWidth = -$('.you-pay .tool-tip').outerWidth() + 1,
+                                                                                        wePayProgressBarWidth = 85;
+
+                                                                                    if (youPayProgressBarWidth < 20) {
+                                                                                        $('.you-pay .tool-tip').css('right', youPayTooltipWidth);
+                                                                                        $('.you-pay .tool-tip').addClass('less-width');
+                                                                                    }
+                                                                                    $('.progress-bar.you-pay').css('max-width', youPayProgressBarWidth + '%');
+                                                                                    $('.progress-bar.we-pay').css('max-width', wePayProgressBarWidth + '%');
+                                                                                });
+                                                                            </script>
+
+                                                                            <div
+                                                                                class="cmp-costExplanation_main-description">
+                                                                                Viewing for <strong>Noah's ACL
+                                                                                    Reconstruction Surgery</strong> at
+                                                                                <strong>Beaumont
+                                                                                    Hospital, Troy</strong>
+                                                                            </div>
+                                                                            <div
+                                                                                class="cmp-costExplanation_progressbar">
+                                                                                <div class="progress" tabindex="0">
+                                                                                    <div class="sr-only">You pay $34,707
+                                                                                        and we pay anything as you have
+                                                                                        BCBSM as a
+                                                                                        secondary insurance of total
+                                                                                        $34,707 surgery cost.
+                                                                                    </div>
+                                                                                    <div class="progress-bar you-pay"
+                                                                                        role="progressbar"
+                                                                                        style="max-width: 100%"
+                                                                                        aria-hidden="true">
+                                                                                        <span
+                                                                                            class="tool-tip you-pay">$34,707</span>
+                                                                                    </div>
+                                                                                    <div class="progress-bar we-pay"
+                                                                                        role="progressbar"
+                                                                                        style="max-width: 0%"
+                                                                                        aria-hidden="true">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="cmp-costExplanation_progressbar-legends">
+                                                                                <div>
+                                                                                    <div
+                                                                                        class="cmp-costExplanation_progressbar-legend-you-pay">
+                                                                                        <div class="legend"></div>
+                                                                                        You Pay* (<span>$34,707</span>)
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="cmp-costExplanation_progressbar-legend-we-pay">
+                                                                                        <div
+                                                                                            class="legend not-covered-legend">
+                                                                                        </div>
+                                                                                        We Pay (<span>$0</span>)
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="cmp-costExplanation_progressbar-legend-total">
+                                                                                    <div class="legend"></div>
+                                                                                    Total (<span>$34,707</span>)
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="cmp-costExplanation_cost-overview-container">
+                                                                                <ul
+                                                                                    class="cmp-costExplanation_cost-overview-block">
+                                                                                    <li
+                                                                                        class="cmp-costExplanation_cost-total">
+                                                                                        <div>Total Average Price</div>
+                                                                                        <div>
+                                                                                            <span>$34,707</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="cmp-costExplanation_cost-we-pay not-covered-border-left">
+                                                                                        <div>We pay</div>
+                                                                                        <div>
+                                                                                            <i class="fal fa-minus"
+                                                                                                aria-hidden="true"></i>
+                                                                                            <span>
+                                                                                                $0
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="cmp-costExplanation_cost-you-pay">
+                                                                                        <div>You pay*</div>
+                                                                                        <div>
+                                                                                            <span>$34,707</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="cmp-costExplanation_cost-breakdown-heading">
+                                                                                How your costs break down
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="cmp-costExplanation_cost-breakdown-container">
+                                                                                <ul
+                                                                                    class="cmp-costExplanation_cost-breakdown-block">
+                                                                                    <li
+                                                                                        class="cmp-costExplanation_cost-breakdown-copay">
+                                                                                        <div>You're copay applied to
+                                                                                            this service</div>
+                                                                                        <div>
+                                                                                            <span>N/A</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="cmp-costExplanation_cost-breakdown-deductible">
+                                                                                        <div>You're deductible applied
+                                                                                            to this service</div>
+                                                                                        <div>
+                                                                                            <span>N/A</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="cmp-costExplanation_cost-breakdown-share">
+                                                                                        <div>You're share of cost (20%
+                                                                                            co-insurance)</div>
+                                                                                        <div>
+                                                                                            <span>N/A</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li
+                                                                                        class="cmp-costExplanation_cost-breakdown-estimated-cost">
+                                                                                        <div>Your estimated
+                                                                                            out-of-pocket cost</div>
+                                                                                        <div>
+                                                                                            <span>$34,707</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div
+                                                                                class="cmp-costExplanation_disclaimer-heading">
+                                                                                Disclaimer
+                                                                            </div>
+                                                                            <div
+                                                                                class="cmp-costExplanation_disclaimer-description">
+                                                                                <p>
+                                                                                    <span class="disclaimer">
+                                                                                        *This is an estimate of what
+                                                                                        you'll pay after insurance. It's
+                                                                                        based on the
+                                                                                        average total cost charged to
+                                                                                        our members for the same service
+                                                                                        or procedure
+                                                                                        at this provider. Your actual
+                                                                                        cost may be different.
+                                                                                    </span>
+                                                                                </p>
+                                                                                <p>
+                                                                                    <span class="disclaimer">
+                                                                                        What this cost estimate
+                                                                                        includes: The estimate includes
+                                                                                        all costs from
+                                                                                        check-in to check-out. Some
+                                                                                        services need approval.
+                                                                                    </span>
+                                                                                </p>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" tabindex="0" class="cmp-tabs__tabpanel"
+                                                            data-cmp-hook-tabs="tabpanel" aria-hidden="true">
+                                                            <div class="container responsivegrid">
+                                                                <div class="cmp-container">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="save-estimate">
+                                        <button type="button" class="cta-mid">
+                                            Download PDF
+                                        </button>
+                                        <button type="button" class="cta-mid" data-toggle="modal"
+                                            data-target=".email-modal">
+                                            Email
+                                        </button>
+                                    </div>
+                                    <!-- data-sly-resource to include email modal -->
+                                    <div class="emailModal aem-GridColumn aem-GridColumn--default--12">
+                                        <section class="cmp-emailModal">
+                                            <div class="modal fade email-modal" tabindex="-1"
+                                                aria-labelledby="emailModal" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content email">
+                                                        <div class="modal-header">
+                                                            <h2>Email your estimate</h2>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <i class="fal fa-times"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="message-description">
+                                                                <p>
+                                                                    Verify your email below and click send to get an
+                                                                    email estimate:
+                                                                </p>
+                                                            </div>
+                                                            <div class="email_wrapper">
+                                                                <label>
+                                                                    Email Address
+                                                                </label>
+                                                                <div class="email_container">
+                                                                    <div class="email_block">
+                                                                        <i class="fal fa-envelope"
+                                                                            aria-hidden="true"></i>
+                                                                        <input class="email_input" type="email"
+                                                                            name="email" aria-label="Email Address"
+                                                                            placeholder="Enter email address">
+                                                                        <button class="email_clear"
+                                                                            aria-label="Clear your email text">
+                                                                            <i class="fas fa-times-circle"
+                                                                                aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <button class="send_cta" name="send_cta"
+                                                                        aria-disabled="true" data-toggle="modal"
+                                                                        data-target=".email-confirm-modal">
+                                                                        Send
+                                                                    </button>
+                                                                </div>
+                                                                <div class="validation-msg">
+                                                                    Please enter a valid address
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <p>
+                                                                Or, <a href="#">download a PDF</a> of you estimate to
+                                                                save or print.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-content email-confirm">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="back" aria-label="back">
+                                                                <i class="fal fa-arrow-left" aria-hidden="true"></i>Back
+                                                            </button>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Click to close Email modal">
+                                                                <i class="fal fa-times"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="confirm">
+                                                                <img src="./static/images/Covered_Icon_THIN_2x.png"
+                                                                    alt="Confirmation Image" />
+                                                                <h2>
+                                                                    Email sent to:<br>
+                                                                    [xxxxxx@xxxx.xxx]
+                                                                </h2>
+                                                            </div>
+                                                            <div class="message-description">
+                                                                <p>
+                                                                    Din't get the email? Go back to check the email
+                                                                    address you entered or try again.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="done" type="button" data-dismiss="modal"
+                                                                aria-label="Close">Done</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <!-- Covered Scenario -->
+                        <div class="estimatedCostOverview aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-estimatedCostOverview">
+                                <div class="cmp-estimatedCostOverview_container container-fluid">
+                                    <div class="row">
+                                        <div class="cmp-procedureCoverage_block col-sm-12 col-md-12 col-lg-4">
+                                            <div class="cmp-procedureCoverage_icon">
+                                                <img src="./static/images/Covered_Icon_THIN_2x.png"
+                                                    alt="Covered Icon" />
+                                            </div>
+                                            <div class="cmp-text__paragraph">
+                                                <p>This procedure is a benefit of your insurance*</p>
+                                                <p>
+                                                    <span class="disclaimer">*Exceptions may apply</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-procedureMemberPay_block col-sm-12 col-md-6 col-lg-4">
+                                            <h4 class="cmp-procedureMemberPay_heading">
+                                                You pay
+                                            </h4>
+                                            <div class="cmp-procedureMemberPay_metrics">
+                                                <h2>$1,256</h2>
+                                            </div>
+                                            <div class="cmp-text__paragraph">
+                                                <p>
+                                                    <span class="disclaimer">Estimated cost from check-in to
+                                                        check-out.<br>
+                                                        Actual cost may vary.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-procedureInsurancePay_block col-sm-12 col-md-6 col-lg-4">
+                                            <h4 class="cmp-procedureInsurancePay_heading">
+                                                We pay
+                                            </h4>
+                                            <div class="cmp-procedureInsurancePay_metrics">
+                                                <h2>$23,540</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="show-more">
+                                        <span class="show-text">Show Cost Explanation</span>
+                                        <span class="hide-text">Hide Cost Explanation</span>
+                                        <i class="fal fa-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="cost-explanation">
+
+                                        <!--Parsys-->
+                                        <div
+                                            class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                                            <div class="cmp-container">
+                                                <div class="tabs">
+                                                    <div class="cmp-tabs">
+                                                        <ol role="tablist" class="cmp-tabs__tablist"
+                                                            aria-multiselectable="false">
+                                                            <li role="tab" class="cmp-tabs__tab cmp-tabs__tab--active"
+                                                                tabindex="0" data-cmp-hook-tabs="tab"
+                                                                aria-selected="true">Cost Explanation
+                                                            </li>
+                                                            <li role="tab" class="cmp-tabs__tab" tabindex="-1"
+                                                                data-cmp-hook-tabs="tab" aria-selected="false">Plan
+                                                                Usage
+                                                            </li>
+                                                        </ol>
+                                                        <div role="tabpanel" tabindex="0"
+                                                            class="cmp-tabs__tabpanel cmp-tabs__tabpanel--active"
+                                                            data-cmp-hook-tabs="tabpanel">
+                                                            <div class="container responsivegrid">
+                                                                <div class="cmp-container">
+                                                                    <div
+                                                                        class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                                        <div
+                                                                            class="heading aem-GridColumn aem-GridColumn--default--12">
+                                                                            <div class="cmp-heading">
+                                                                                <h1 class="cmp-heading__text">Find
+                                                                                    Procedure Cost</h1>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" tabindex="0" class="cmp-tabs__tabpanel"
+                                                            data-cmp-hook-tabs="tabpanel" aria-hidden="true">
+                                                            <div class="container responsivegrid">
+                                                                <div class="cmp-container">
+                                                                    <div
+                                                                        class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <!-- Covered as Secondary Insurance Scenario -->
+                        <div class="estimatedCostOverview aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-estimatedCostOverview">
+                                <div class="cmp-estimatedCostOverview_container container-fluid">
+                                    <div class="row">
+                                        <div class="cmp-procedureCoverage_block col-sm-12 col-md-12 col-lg-4">
+                                            <div class="cmp-procedureCoverage_icon">
+                                                <img src="./static/images/Not_Covered_Icon_THIN_2x.png"
+                                                    alt="Covered Icon" />
+                                            </div>
+                                            <div class="cmp-text__paragraph">
+                                                <p>This procedure is not a benefit of your insurance*</p>
+                                                <p>
+                                                    <span class="disclaimer">*Exceptions may apply</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-procedureMemberPay_block col-sm-12 col-md-6 col-lg-4">
+                                            <h4 class="cmp-procedureMemberPay_heading">
+                                                You pay
+                                            </h4>
+                                            <div class="cmp-procedureMemberPay_metrics">
+                                                <h2>$1,256</h2>
+                                            </div>
+                                            <div class="cmp-text__paragraph">
+                                                <p>
+                                                    <span class="disclaimer">Estimated cost from check-in to
+                                                        check-out.<br>
+                                                        Actual cost may vary.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-procedureInsurancePay_block col-sm-12 col-md-6 col-lg-4">
+                                            <h4 class="cmp-procedureInsurancePay_heading">
+                                                We pay
+                                            </h4>
+                                            <div class="cmp-procedureInsurancePay_metrics">
+                                                <i class="fas fa-exclamation-triangle fa-2x" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="cmp-text__paragraph">
+                                                <p>
+                                                    <span class="disclaimer">You have other primary coverage which may
+                                                        pay but
+                                                        would not be reflected in you cost.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="show-more">
+                                        <span class="show-text">Show Cost Explanation</span>
+                                        <span class="hide-text">Hide Cost Explanation</span>
+                                        <i class="fal fa-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="cost-explanation">
+
+                                        <!--Parsys-->
+                                        <div
+                                            class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                                            <div class="cmp-container">
+                                                <div class="tabs">
+                                                    <div class="cmp-tabs">
+                                                        <ol role="tablist" class="cmp-tabs__tablist"
+                                                            aria-multiselectable="false">
+                                                            <li role="tab" class="cmp-tabs__tab cmp-tabs__tab--active"
+                                                                tabindex="0" data-cmp-hook-tabs="tab"
+                                                                aria-selected="true">Cost Explanation
+                                                            </li>
+                                                            <li role="tab" class="cmp-tabs__tab" tabindex="-1"
+                                                                data-cmp-hook-tabs="tab" aria-selected="false">Plan
+                                                                Usage
+                                                            </li>
+                                                        </ol>
+                                                        <div role="tabpanel" tabindex="0"
+                                                            class="cmp-tabs__tabpanel cmp-tabs__tabpanel--active"
+                                                            data-cmp-hook-tabs="tabpanel">
+                                                            <div class="container responsivegrid">
+                                                                <div class="cmp-container">
+                                                                    <div
+                                                                        class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                                        <div
+                                                                            class="heading aem-GridColumn aem-GridColumn--default--12">
+                                                                            <div class="cmp-heading">
+                                                                                <h1 class="cmp-heading__text">Find
+                                                                                    Procedure Cost</h1>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" tabindex="0" class="cmp-tabs__tabpanel"
+                                                            data-cmp-hook-tabs="tabpanel" aria-hidden="true">
+                                                            <div class="container responsivegrid">
+                                                                <div class="cmp-container">
+                                                                    <div
+                                                                        class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

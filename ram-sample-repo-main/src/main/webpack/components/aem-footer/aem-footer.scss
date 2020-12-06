@@ -1,0 +1,150 @@
+.footer-distributed {
+  background-color: #f2f2f2;
+  border-top: 1px solid #d8d8d8;
+  min-height: 100px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-distributed .container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+
+.footer_content {
+  font-size: 14px;
+  border-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.footer_content ul {
+  height: 20px;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.footer_content ul li {
+  color: #fff;
+  padding-right: 15px;
+  margin-right: 10px;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.footer_content ul li:not(:last-child) {
+  border-right: 1px solid #323232;
+}
+
+.footer_content ul li:last-child {
+  white-space: nowrap;
+}
+
+.footer_content ul li a {
+  text-decoration: underline;
+}
+
+.minor_footer {
+  font-size: 11px;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+
+  .footer-distributed .container .row {
+    margin: 0;
+  }
+
+  .footer_content ul {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .footer-distributed .container {
+    max-width: 1170px;
+  }
+}
+
+/* Virtual Assistant */
+.icon_sb_container {
+  display: block;
+  z-index: 10000;
+  position: fixed;
+  bottom: 17px;
+  right: 20px;
+  border-radius: 26px;
+  background: #428bca;
+  transition: all 0.3s ease-in-out;
+  padding: 16px 14px 13px 15px;
+  text-decoration: none;
+}
+
+.icon_sb_container:hover {
+  text-decoration: none;
+}
+
+.icon_sb_container:active {
+  text-decoration: none;
+  outline: none;
+}
+
+.icon_sb_container.at_the_top {
+  bottom: 77px;
+}
+
+.icon_sb {
+  height: 23px;
+  width: 23px;
+}
+
+.sb_title {
+  width: 116px;
+  height: 10px;
+  margin: -3px 0px 0px 5px;
+  text-decoration: none;
+  transition: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.sb_title.clicked {
+  width: 0;
+  height: 0;
+  margin: -3px 0px 0px -4px;
+  text-decoration: none;
+  transition: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+.scrollup {
+  display: none;
+  outline: none;
+  z-index: 1020;
+  position: fixed;
+  bottom: 17px;
+  right: 20px;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  background: #428bca;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.icon_up_btn {
+  width: 22px;
+  height: 24px;
+  margin: 2px 0 0 15px;
+}
+
+@media (max-width:767px){
+  .icon_sb_container {
+    z-index: 3000;
+  }
+}

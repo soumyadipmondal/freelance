@@ -1,0 +1,360 @@
+@import "../_variables.scss";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 48px;
+  text-transform: none;
+
+  @media (min-width: $tablet) {
+    font-size: 54px;
+    line-height: 58px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 36px;
+  text-transform: none;
+
+  @media (min-width: $tablet) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
+  text-transform: none;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: none;
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: none;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+p {
+  color: $primary-black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-heading;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+}
+
+//Overriding Bootstrap container class
+.root.container.responsivegrid {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  >.cmp-container {
+
+    >.container {
+      padding-right: 0;
+      padding-left: 0;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+  }
+
+}
+
+.popover {
+  font-family: $font-family;
+  font-size: 12px;
+  background-color: $primary-white;
+  color: $primary-grey-dark;
+  box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 0;
+
+  .popover-body {
+    padding: 20px;
+  }
+}
+
+.custom-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.custom-control-label {
+  display: flex;
+  align-items: center;
+
+  > span {
+    padding: 9px 0;
+    margin-left: 10px;
+  }
+
+  span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  img {
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  i {
+    color: $secondary-blue-dark;
+    margin-left: 10px;
+  }
+
+  div {
+    margin-left: 5px;
+  }
+}
+
+.custom-control-label::before {
+  border: 1px solid $secondary-blue-dark;
+  width: 24px;
+  height: 24px;
+}
+
+.custom-radio {
+
+  .custom-control-label::before {
+    border-radius: 50%;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::after {
+    border-radius: 50%;
+    background-image: none;
+  }
+}
+
+.custom-checkbox {
+
+  .custom-control-label::before {
+    border-radius: 0;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::after {
+    border-radius: 0;
+    background-image: none;
+  }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: $primary-white;
+}
+
+.custom-control-input:checked ~ .custom-control-label::after {
+  content: '\f00c';
+  font-size: 12px;
+  color: $primary-white;
+  background-color: $secondary-green-light;
+  background-image: none;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-mid {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $secondary-blue-dark;
+  text-align: center;
+  background-color: $primary-white;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  margin: 0;
+  height: 50px;
+
+  &:hover,
+  &:active {
+    color: $primary-blue-light;
+    //background-color: $primary-blue-light;
+  }
+}
+
+.cta-mid-green {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $primary-white;
+  text-align: center;
+  background-color: $secondary-green-dark;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  margin: 0;
+  height: 50px;
+
+  &:hover,
+  &:active {
+    background-color: $secondary-green-mid;
+  }
+}
+
+.popover-body {
+  padding: 30px;
+
+  p {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.generic-modal {
+
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-header {
+    padding: 30px 30px 15px;
+    border-bottom: none;
+
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      margin: 15px 0 0;
+    }
+  }
+
+  .modal-body {
+    padding: 30px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .close {
+    color: $primary-blue-light;
+    padding: 15px;
+    margin: -16px -16px -16px 25px;
+  }
+
+  p {
+    color: $primary-grey-dark;
+  }
+
+  .modal-footer {
+    padding: 25px 30px;
+    justify-content: center;
+    box-shadow: 0 -3px 10px 3px rgba(68, 68, 68, 0.13);
+  }
+}
+
+@media (max-width: ($tablet)-1) {
+
+  .generic-modal {
+
+    .modal-dialog {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0;
+    }
+
+    .modal-content {
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .generic-modal {
+
+    .modal-dialog {
+      min-width: 540px;
+    }
+
+    .modal-header {
+
+      h2 {
+        font-size: 42px;
+        line-height: 54px;
+      }
+    }
+
+    .modal-body {
+
+      h2 {
+        font-size: 42px;
+        line-height: 54px;
+      }
+    }
+  }
+}

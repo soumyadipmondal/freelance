@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>cmp-lifetimeMaximum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="container responsivegrid">
+                <div class="cmp-container">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                        <div class="lifetimeMaximum aem-GridColumn aem-GridColumn--default--12">
+
+                            <!-- Component HTML Goes here -->
+                            <section class="cmp-lifetimeMaximum">
+
+                                <div class="cmp-lifetimeMaximum_main-description">
+                                    Viewing lifetime benefit limit for <strong>Jane's ACL Reconstruction
+                                        Surgery</strong> at <strong>Beaumont
+                                        Hospital, Troy</strong>
+                                </div>
+                                <h4>Your Lifetime Benefits</h4>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary">
+                                        <input class="before-estimate" type="radio" name="estimate">Before
+                                    </label>
+                                    <label class="btn btn-secondary active">
+                                        <input class="after-estimate" type="radio" name="estimate" checked>After
+                                    </label>
+                                </div>
+
+                                <!-- Lifetime Limit not met scenario -->
+                                <div class="cmp-lifetimeMaximum_progressbar">
+                                    <div class="progress" tabindex="0">
+                                        <div class="sr-only">Lifetime Limit paid $120,256 before procedure and $122,256
+                                            after procedure of Lifetime Limit $1,000,000.
+                                        </div>
+                                        <div class="progress-bar lifetime-paid" role="progressbar"
+                                            style="width: 40%" aria-hidden="true">
+                                            <span class="tool-tip">$120,256</span>
+                                        </div>
+                                        <div class="progress-bar progress-bar-striped after-procedure"
+                                            role="progressbar" style="max-width: 25%" aria-hidden="true">
+                                            <span class="tool-tip">$122,256</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cmp-lifetimeMaximum_progressbar-legends">
+                                    <div>
+                                        <div class="cmp-lifetimeMaximum_progressbar-legend-lifetime-paid">
+                                            <div class="legend"></div>
+                                            Lifetime Paid ($120,256)
+                                        </div>
+                                        <div class="cmp-lifetimeMaximum_progressbar-legend-after-procedure">
+                                            <div class="legend"></div>
+                                            After Procedure ($122,256)
+                                        </div>
+                                    </div>
+                                    <div class="cmp-lifetimeMaximum_progressbar-legend-lifetime-limit">
+                                        <div class="legend"></div>
+                                        Lifetime Limit ($1,000,000)
+                                    </div>
+                                </div>
+
+                                <h5>Noah has $877,744 available</h5>
+
+                                <div class="cmp-lifetimeMaximum_disclaimer-heading">
+                                    Disclaimer
+                                </div>
+                                <div class="cmp-lifetimeMaximum_disclaimer-description">
+                                    <p>
+                                        <span class="disclaimer">
+                                            Lifetime benefit limits are set for each individual member on this plan.
+                                            This means one member could reach their limit and lose coverage of have
+                                            limited benefits, while other members of the plan may still have coverage.
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <hr>
+
+                                <!-- Lifetime Limit reached scenario -->
+                                <div class="cmp-lifetimeMaximum_progressbar">
+                                    <div class="progress" tabindex="0">
+                                        <div class="sr-only">Lifetime Limit paid $1,000,000 of Lifetime Limit
+                                            $1,000,000.
+                                        </div>
+                                        <div class="progress-bar lifetime-paid lifetime-limit-paid" role="progressbar"
+                                             style="width: 90%" aria-hidden="true">
+                                            <span class="tool-tip">$1,000,000</span>
+                                            <span class="lifetime-limit-met">
+                                                <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                                The limit has been reached
+                                            </span>
+                                        </div>
+                                        <div class="progress-bar progress-bar-striped after-procedure lifetime-limit-paid"
+                                             role="progressbar" style="max-width: 10%" aria-hidden="true">
+                                            <span class="tool-tip">$1,000,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cmp-lifetimeMaximum_progressbar-legends">
+                                    <div>
+                                        <div class="cmp-lifetimeMaximum_progressbar-legend-lifetime-paid">
+                                            <div class="legend lifetime-met"></div>
+                                            Lifetime Limit Paid ($1,000,000)
+                                        </div>
+                                        <div class="cmp-lifetimeMaximum_progressbar-legend-after-procedure">
+                                            <div class="legend lifetime-met"></div>
+                                            After Procedure ($0)
+                                        </div>
+                                    </div>
+                                    <div class="cmp-lifetimeMaximum_progressbar-legend-lifetime-limit">
+                                        <div class="legend"></div>
+                                        Lifetime Limit ($1,000,000)
+                                    </div>
+                                </div>
+
+                                <div class="lifetimeMax-notification">
+                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                    <div class="notification_description">
+                                        <p>
+                                            <strong>*Lifetime Limit Reached</strong> - You have reached the lifetime
+                                            limit of $1,000,000. This means either coverage may have ended or your plan
+                                            will have limited benefits in upcoming years. For more information, please
+                                            call the number on the back of your member ID card.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="cmp-lifetimeMaximum_disclaimer-heading">
+                                    Disclaimer
+                                </div>
+                                <div class="cmp-lifetimeMaximum_disclaimer-description">
+                                    <p>
+                                        <span class="disclaimer">
+                                            Lifetime benefit limits are set for each individual member on this plan.
+                                            This means one member could reach their limit and lose coverage of have
+                                            limited benefits, while other members of the plan may still have coverage.
+                                        </span>
+                                    </p>
+                                </div>
+
+                            </section>
+<!--                            <script>-->
+<!--                                $(document).ready(function(){-->
+<!--                                    const lifetimePaidProgressBarWidth = 10,-->
+<!--                                        lifetimePaidTooltipWidth = -$('.lifetime-paid .tool-tip').outerWidth() + 1,-->
+<!--                                        afterProcedureProgressBarWidth = 15,-->
+<!--                                        afterProcedureTooltipWidth = -$('.after-procedure .tool-tip').outerWidth() + 1;-->
+
+<!--                                    if (lifetimePaidProgressBarWidth < 25) {-->
+<!--                                        $('.lifetime-paid .tool-tip').css('right', lifetimePaidTooltipWidth);-->
+<!--                                        $('.lifetime-paid .tool-tip').addClass('less-width');-->
+<!--                                    }-->
+<!--                                    $('.progress-bar.lifetime-paid').css('width', lifetimePaidProgressBarWidth + '%');-->
+
+<!--                                    if ((lifetimePaidProgressBarWidth + afterProcedureProgressBarWidth) < 25) {-->
+<!--                                        $('.after-procedure .tool-tip').css('right', afterProcedureTooltipWidth);-->
+<!--                                        $('.after-procedure .tool-tip').addClass('less-width');-->
+<!--                                    }-->
+<!--                                    $('.progress-bar.after-procedure').css('max-width', afterProcedureProgressBarWidth + '%');-->
+<!--                                });-->
+<!--                            </script>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

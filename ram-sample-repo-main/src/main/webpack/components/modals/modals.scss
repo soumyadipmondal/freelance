@@ -1,0 +1,44 @@
+@import "../../site/_variables.scss";
+
+.modal {
+
+  &.generic-modal {
+
+    .cta-mid {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .cta-mid-green {
+      width: 100%;
+
+      &:hover {
+        color: $primary-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .modal {
+
+    &.generic-modal {
+
+      .modal-footer {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .cta-mid {
+        width: 49%;
+        margin-bottom: 0;
+      }
+
+      .cta-mid-green {
+        width: 49%;
+      }
+    }
+  }
+}

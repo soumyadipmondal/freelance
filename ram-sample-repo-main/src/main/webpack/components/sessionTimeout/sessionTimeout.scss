@@ -1,0 +1,33 @@
+@import "../../site/_variables.scss";
+
+.sessionTimeout {
+
+  .cta-mid {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .cta-mid-green {
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .sessionTimeout {
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cta-mid {
+      width: 49%;
+      margin-bottom: 0;
+    }
+
+    .cta-mid-green {
+      width: 49%;
+    }
+  }
+}

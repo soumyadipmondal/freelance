@@ -1,0 +1,39 @@
+@import "../../site/_variables.scss";
+
+.cmp-errorMessage {
+  max-width: $container-max-width;
+  border-width: 1px 1px 1px 15px;
+  border-style: solid;
+  border-color: $secondary-yellow;
+  margin: 30px 15px 15px;
+
+  .cmp-errorMessage_heading {
+    color: $primary-black;
+    font-weight: 500;
+    margin: 25px 25px 10px;
+  }
+
+  .cmp-errorMessage_description {
+
+    p {
+      font-weight: 300;
+      margin: 10px 25px 25px;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-errorMessage {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: ($desktop)+1) {
+
+  .cmp-errorMessage {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

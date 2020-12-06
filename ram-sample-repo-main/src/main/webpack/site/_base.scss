@@ -1,0 +1,63 @@
+@import "./_variables.scss";
+
+//== Base
+
+// Only native HTML elements go here
+
+html,
+body {
+    margin: 0;
+    font-size: $font-size;
+    font-family: $font-family;
+    line-height: $font-height;
+    color: $color-foreground;
+    background: $color-background;
+
+    @media (prefers-color-scheme: dark) {
+        color: $color-foreground-dark;
+        background: $color-background-dark;
+    }
+}
+
+
+a {
+    color: $color-link;
+    text-decoration: none;
+
+    @media (prefers-color-scheme: dark) {
+        color: $color-link-dark;
+    }
+
+    &:hover {
+        color: $color-link;
+        text-decoration: underline;
+    }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    height: 30px;
+    width: 25px;
+}
+
+::placeholder {
+    color: $primary-grey-mid;
+}

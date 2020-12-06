@@ -1,0 +1,264 @@
+@import "../../site/_variables.scss";
+
+@mixin legend($color, $color-limit-met) {
+  display: flex;
+  align-items: center;
+
+  .legend {
+    height: 15px;
+    width: 15px;
+    min-width: 15px;
+    background-color: $color;
+    margin-right: 15px;
+
+    &.lifetime-met {
+      background-color: $color-limit-met;
+    }
+  }
+}
+
+@mixin progressBar($color, $color-limit-met) {
+  background-color: $color;
+  width: 0;
+
+  .tool-tip {
+    background-color: $color;
+    z-index: 1;
+
+    &:after {
+      border-right: 1px solid $color;
+    }
+
+    &.less-width:after {
+      left: 0;
+      right: unset;
+      border-left: 1px solid $color;
+      border-right: none;
+    }
+  }
+
+  &.lifetime-limit-paid {
+    background-color: $color-limit-met;
+
+    .tool-tip {
+      background-color: $color-limit-met;
+
+      &:after {
+        border-right: 1px solid $color-limit-met;
+      }
+    }
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.cmp-lifetimeMaximum {
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  h4 {
+    color: $primary-black;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .btn-group {
+
+    .btn-secondary {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 110px;
+      padding: 0;
+      border-color: $secondary-blue-dark;
+      color: $secondary-blue-dark;
+      background-color: $primary-white;
+
+      &.hover,
+      &.active,
+      &.focus {
+        border-color: $secondary-blue-dark;
+        color: $primary-white;
+        background-color: $secondary-blue-dark;
+        box-shadow: none;
+      }
+    }
+
+    & > .btn:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    & > .btn:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+
+  .cmp-lifetimeMaximum_progressbar {
+
+    .progress {
+      background-color: $primary-grey-light;
+      overflow: visible;
+      border-radius: 0;
+      height: 18px;
+      margin-top: 60px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .progress-bar {
+      font-size: 10px;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      overflow: visible;
+
+      i {
+        margin-right: 5px;
+      }
+
+      &.lifetime-paid {
+        @include progressBar($secondary-orange, $secondary-red-dark);
+
+        .tool-tip {
+          display: none;
+        }
+      }
+
+      &.after-procedure {
+        @include progressBar($secondary-orange, $secondary-red-dark);
+        background-color: $primary-orange;
+        animation: progressBar 3s ease-in-out forwards;
+
+        &.lifetime-limit-paid {
+          background-color: $secondary-red-mid;
+        }
+      }
+
+      .lifetime-limit-met {
+        display: none;
+      }
+    }
+
+    .tool-tip {
+      font-size: 12px;
+      padding: 12px 10px;
+      position: absolute;
+      display: block;
+      right: 0;
+      bottom: 25px;
+    }
+
+    .tool-tip:after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: 0;
+      height: 7px;
+    }
+  }
+
+  .cmp-lifetimeMaximum_progressbar-legends {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .cmp-lifetimeMaximum_progressbar-legend-lifetime-paid {
+    margin-bottom: 10px;
+    @include legend($secondary-orange, $secondary-red-dark);
+  }
+
+  .cmp-lifetimeMaximum_progressbar-legend-after-procedure {
+    @include legend($primary-orange, $secondary-red-mid);
+
+    .legend {
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    }
+  }
+
+  .cmp-lifetimeMaximum_progressbar-legend-lifetime-limit {
+    @include legend($primary-grey-light, none);
+  }
+
+  .cmp-lifetimeMaximum_disclaimer-heading {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .cmp-lifetimeMaximum_disclaimer-description {
+
+    .disclaimer {
+      font-size: 12px;
+      line-height: 20px;
+      color: $primary-grey-dark;
+    }
+  }
+
+  .lifetimeMax-notification {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px $mobile-padding-x-small;
+    background-color: $secondary-red-light;
+    margin: 30px 0 60px;
+
+    i {
+      color: $secondary-red-dark;
+      margin-right: 15px;
+      margin-top: 2px;
+    }
+  }
+
+  .notification_description {
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      color: $primary-black;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-lifetimeMaximum {
+
+    .cmp-lifetimeMaximum_progressbar-legends {
+
+      >div:first-child {
+        display: inline-flex;
+      }
+
+      .cmp-lifetimeMaximum_progressbar-legend-lifetime-paid {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .cmp-lifetimeMaximum {}
+}

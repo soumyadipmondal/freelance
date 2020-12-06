@@ -1,0 +1,323 @@
+@import "../../site/_variables.scss";
+
+@mixin legend($color) {
+  display: flex;
+  align-items: center;
+
+  .legend {
+    height: 15px;
+    width: 15px;
+    min-width: 15px;
+    background-color: $color;
+    margin-right: 15px;
+
+    &.not-covered-legend {
+      background-color: $secondary-red-dark;
+    }
+
+    &.not-covered-cob-legend {
+      background-color: $secondary-orange;
+    }
+  }
+}
+
+@mixin costExplanation_cost {
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  &:last-child {
+    font-weight: 500;
+    background-color: #f5f5f5;
+    border-top: 1px solid $primary-grey-light;
+  }
+
+  span {
+    width: 75px;
+    display: inline-block;
+    text-align: right;
+  }
+
+}
+
+.cmp-costExplanation {
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  .cmp-costExplanation_progressbar {
+
+    .progress {
+      background-color: $secondary-grey;
+      overflow: visible;
+      border-radius: 0;
+      height: 18px;
+      margin-top: 60px;
+      margin-bottom: 15px;
+    }
+
+    .progress-bar {
+      position: relative;
+      overflow: visible;
+      width: 0;
+
+      &.you-pay {
+        animation: progressBar 1s ease-in-out forwards;
+      }
+
+      &.we-pay {
+        animation: progressBar 1s ease-in-out 1s forwards;
+      }
+    }
+
+    @keyframes progressBar {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    .tool-tip {
+      padding: 12px 10px;
+      position: absolute;
+      display: block;
+      right: 0;
+
+      &.you-pay {
+        bottom: 25px;
+
+        &.less-width:after {
+          left: 0;
+          right: unset;
+          border-left: 1px solid $primary-blue-light;
+          border-right: none;
+        }
+      }
+
+      &.we-pay {
+        bottom: 60px;
+      }
+    }
+
+    .tool-tip:after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: 0;
+      height: 7px;
+    }
+
+    .you-pay:after {
+      border-right: 1px solid $primary-blue-light;
+    }
+
+    .we-pay:after {
+      border-right: 1px solid $secondary-blue-dark;
+      height: 42px;
+    }
+
+    .you-pay {
+      background-color: $primary-blue-light;
+    }
+
+    .we-pay {
+      background-color: $secondary-blue-dark;
+    }
+
+  }
+
+  .cmp-costExplanation_progressbar-legends {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .cmp-costExplanation_progressbar-legend-you-pay {
+    margin-bottom: 10px;
+    @include legend($primary-blue-light);
+  }
+
+  .cmp-costExplanation_progressbar-legend-we-pay {
+    @include legend($secondary-blue-dark);
+  }
+
+  .cmp-costExplanation_progressbar-legend-total {
+    @include legend($primary-grey-light);
+  }
+
+  .cmp-costExplanation_cost-overview-container {
+    margin-bottom: 30px;
+  }
+
+  .cmp-costExplanation_cost-overview-block {
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      @include costExplanation_cost;
+    }
+  }
+
+  .cmp-costExplanation_cost-total {
+    border-left: 5px solid $primary-grey-light;
+  }
+
+  .cmp-costExplanation_cost-we-pay {
+    border-left: 5px solid $secondary-blue-dark;
+
+    &.not-covered-border-left {
+      border-left: 5px solid $secondary-red-dark;
+    }
+
+    &.not-covered-cob-border-left {
+      border-left: 5px solid $secondary-orange;
+    }
+
+    span {
+
+      i {
+        color: $secondary-orange;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .cmp-costExplanation_cost-you-pay {
+    border-left: 5px solid $primary-blue-light;
+  }
+
+  .cmp-costExplanation_cost-breakdown-heading {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .cmp-costExplanation_cost-breakdown-container {
+    margin-bottom: 30px;
+  }
+
+  .cmp-costExplanation_cost-breakdown-block {
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      border-left: 5px solid $primary-blue-light;
+
+      @include costExplanation_cost;
+    }
+  }
+
+  .cmp-costExplanation_disclaimer-heading {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .cmp-costExplanation_disclaimer-description {
+
+    .disclaimer {
+      font-size: 12px;
+      line-height: 20px;
+      color: $primary-grey-dark;
+    }
+
+    .cob.fas {
+      font-size: 12px;
+      line-height: 20px;
+      color: $secondary-orange;
+
+      &:before {
+        content: '\f071';
+      }
+    }
+
+    .not-covered.fas {
+      font-size: 12px;
+      line-height: 20px;
+      color: $secondary-red-dark;
+
+      &:before {
+        content: '\f071';
+      }
+    }
+  }
+
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-costExplanation {
+
+    .cmp-costExplanation_progressbar-legends {
+
+      >div:first-child {
+        display: inline-flex;
+      }
+
+      .cmp-costExplanation_progressbar-legend-you-pay {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    .cmp-costExplanation_cost-overview-block {
+      font-size: 16px;
+
+      li {
+
+        span {
+          width: 100px;
+        }
+      }
+    }
+
+    .cmp-costExplanation_cost-breakdown-block {
+      font-size: 16px;
+
+      li {
+
+        span {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .cmp-costExplanation {
+
+    .cmp-costExplanation_cost-overview-block {
+
+      li {
+
+        span {
+          width: 150px;
+        }
+      }
+    }
+
+    .cmp-costExplanation_cost-breakdown-block {
+
+      li {
+
+        span {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

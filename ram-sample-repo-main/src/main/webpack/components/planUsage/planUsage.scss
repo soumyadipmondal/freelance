@@ -1,0 +1,436 @@
+@import "../../site/_variables.scss";
+
+@mixin legend($color) {
+  display: flex;
+  align-items: center;
+
+  .legend {
+    height: 15px;
+    width: 15px;
+    min-width: 15px;
+    background-color: $color;
+    margin-right: 15px;
+  }
+}
+
+@mixin progressBar($color) {
+  background-color: $color;
+  width: 0;
+
+  .tool-tip {
+    color: $secondary-blue-dark;
+    z-index: 1;
+
+    &:after {
+      border-left: 1px solid $color;
+    }
+  }
+}
+
+@mixin underlay($justify-content, $align-items, $gradient-start, $gradient-end) {
+  font-size: 10px;
+  color: $primary-grey-dark;
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  padding-bottom: 5px;
+  background: linear-gradient($gradient-start, $gradient-end);
+}
+
+@keyframes progressBarWidth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.cmp-planUsage {
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  h4 {
+    color: $primary-black;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .btn-group {
+
+    .btn-secondary {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 110px;
+      padding: 0;
+      border-color: $secondary-blue-dark;
+      color: $secondary-blue-dark;
+      background-color: $primary-white;
+
+      &.hover,
+      &.active,
+      &.focus {
+        border-color: $secondary-blue-dark;
+        color: $primary-white;
+        background-color: $secondary-blue-dark;
+        box-shadow: none;
+      }
+    }
+
+    &>.btn:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    &>.btn:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+
+  .cmp-planUsage_progressbar {
+    height: 120px;
+    width: 85%;
+
+    .progress {
+      background-color: $primary-grey-light;
+      overflow: visible;
+      border-radius: 0;
+      height: 18px;
+      margin: 100px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .progress-bar {
+      font-size: 10px;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      overflow: visible;
+
+      &.deductible-before {
+        @include progressBar($tertiary-green-dark);
+
+        .tool-tip {
+          display: none;
+        }
+      }
+
+      &.deductible-after {
+        @include progressBar($tertiary-green-mid);
+        animation: progressBarWidth 3s ease-in-out forwards;
+      }
+
+      &.deductible-met {
+        background-color: transparent;
+      }
+
+      &.oopm-before {
+        @include progressBar($tertiary-orange-dark);
+
+        .tool-tip {
+          display: none;
+        }
+      }
+
+      &.oopm-after {
+        @include progressBar($tertiary-orange-mid);
+        animation: progressBarWidth 3s ease-in-out forwards;
+      }
+
+      &.oopm-met {
+        background-color: transparent;
+      }
+    }
+
+    .tool-tip {
+      font-size: 14px;
+      font-weight: 700;
+      padding: 7px 2px;
+      position: absolute;
+      display: block;
+      right: -47px;
+      bottom: 70px;
+    }
+
+    .tool-tip:after {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 0;
+      height: 50px;
+    }
+
+    .indicator {
+      position: absolute;
+      bottom: -1px;
+      background-color: transparent;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 9px;
+        border-right: 1px solid $primary-grey-light;
+      }
+
+      >i {
+        font-size: 20px;
+        border-radius: 50%;
+        color: $primary-grey-mid;
+        background-color: $primary-grey-light;
+      }
+
+      &.deductible {
+
+        &:before {
+          height: 45px;
+        }
+      }
+
+      &.oopm {
+
+        &:before {
+          height: 85px;
+        }
+      }
+
+      &.deductible-met {
+
+        i {
+
+          &.fa-check-circle {
+            color: $tertiary-green-mid;
+            background-color: $primary-white;
+          }
+        }
+      }
+
+      &.deductible-passed {
+
+        i {
+
+          &.fa-circle {
+            background-color: $tertiary-green-dark;
+            color: $primary-white;
+          }
+        }
+      }
+
+      &.oopm-met {
+
+        i {
+
+          &.fa-check-circle {
+            color: $tertiary-orange-mid;
+            background-color: $primary-white;
+          }
+        }
+      }
+
+      span {
+        color: $primary-black;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+        position: absolute;
+
+        i {
+          color: $secondary-green-light;
+          margin-right: 5px;
+        }
+      }
+
+      .deductible-indicator-text {
+        text-align: center;
+        right: -30px;
+        top: 70px;
+        width: 80px;
+        background-color: white;
+        z-index: 1;
+      }
+
+      .oopm-indicator-text {
+        text-align: center;
+        right: -40px;
+        top: 110px;
+        width: 105px;
+      }
+    }
+
+    .underlay {
+      position: relative;
+      display: flex;
+      top: -159px;
+      height: 100px;
+      width: 115%;
+      z-index: 0;
+
+      .deductible-cost {
+        @include underlay(center, flex-end, $gradient-green-start, $gradient-green-end);
+      }
+
+      .you-pay-text {
+        display: none;
+      }
+
+      .coinsurance {
+        @include underlay(center, flex-end, $gradient-orange-start, $gradient-orange-end);
+      }
+
+      .coinsurance-text {
+        display: none;
+      }
+
+      .over-oopm {
+        @include underlay(space-between, center, $gradient-blue-start, $gradient-blue-end);
+        flex-direction: column;
+        width: 15%;
+      }
+
+      .gradient-bar {
+        background: linear-gradient(to right, $primary-grey-light 0%, $primary-grey-light 50%, transparent 100%);
+        height: 18px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-top: 41px;
+      }
+
+      .you-no-pay-text {
+        display: none;
+      }
+    }
+  }
+
+  .cmp-planUsage_progressbar-legends {
+    font-size: 12px;
+    margin-bottom: 30px;
+
+    >div {
+      margin-bottom: 15px;
+    }
+  }
+
+  .cmp-planUsage_progressbar-legend-deductible-paid-to-service {
+    @include legend($tertiary-green-mid);
+  }
+
+  .cmp-planUsage_progressbar-legend-oopm-paid-to-service {
+    @include legend($tertiary-orange-mid);
+  }
+
+  .cmp-planUsage_progressbar-legend-deductible-paid-this-year {
+    @include legend($tertiary-green-dark);
+  }
+
+  .cmp-planUsage_progressbar-legend-oopm-paid-this-year {
+    @include legend($tertiary-orange-dark);
+  }
+
+  .legend-heading {
+    font-weight: 700;
+  }
+
+  .plan-usage-notification {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px $mobile-padding-x-small;
+    margin: 30px 0;
+
+    &.deductible {
+      background-color: $tertiary-green-light;
+
+      i {
+        color: $secondary-green-light;
+      }
+    }
+
+    &.oopm {
+      background-color: $tertiary-orange-light;
+
+      i {
+        color: $secondary-red-dark;
+      }
+    }
+
+    i {
+      margin-right: 15px;
+      margin-top: 2px;
+    }
+  }
+
+  .notification_description {
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      color: $primary-black;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-planUsage {
+
+    .cmp-planUsage_progressbar {
+
+      .indicator {
+
+        &.oopm {
+
+          &:before {
+            height: 75px;
+          }
+        }
+
+        .deductible-indicator-text {
+          right: -65px;
+          width: 150px;
+          white-space: nowrap;
+        }
+
+        .oopm-indicator-text {
+          right: -90px;
+          top: 100px;
+          width: 200px;
+          white-space: nowrap;
+        }
+      }
+
+      .underlay {
+
+        .you-pay-text {
+          display: block;
+        }
+
+        .coinsurance-text {
+          display: block;
+        }
+
+        .you-no-pay-text {
+          display: block;
+        }
+      }
+    }
+
+    .cmp-planUsage_progressbar-legends {
+
+      >div:first-child {
+        display: inline-flex;
+      }
+    }
+  }
+}

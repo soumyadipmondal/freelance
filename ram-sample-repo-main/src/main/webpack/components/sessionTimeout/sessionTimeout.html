@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>sessionTimeOut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="sessionTimeout">
+                <input type="hidden" id="logoutUrlPath" name="logoutUrlPathName" value="https://www.google.com" />
+                <input type="hidden" id="modelPopUpTime" name="modelPopUpTimeName" value="15" />
+                <input type="hidden" id="sessionTime" name="sessionTimeName" value="30" />
+                <input type="hidden" id="popUpText" name="popUpTextName" value="Test" />
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                    data-target=".sessionTimeoutModal">
+                    Session Timeout Modal
+                </button>
+                <!-- Component HTML Goes here -->
+                <div class="modal fade sessionTimeoutModal generic-modal" tabindex="-1" data-keyboard="false"
+                    data-backdrop="static" role="dialog" aria-labelledby="sessionTimeoutLabel">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 id="sessionTimeoutLabel">SOB Timeout Alert</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Your session will end in due to inactivity. To continue, click Remain Logged In. To
+                                    end your session now, click Log Out.
+                                    <br>
+                                    <br>
+                                    <span id="timeValueShowInMin"></span> Min and <span id="timeValueShowInSec"></span> Seconds.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="cta-mid redirectToLoginPage">Logout</button>
+                                <button type="button" class="cta-mid-green activityCheckerCount"
+                                    data-dismiss="modal">Remain Logged In</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

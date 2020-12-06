@@ -1,0 +1,43 @@
+@import "../../site/_variables.scss";
+
+.cmp-providerresultcountbar {
+
+  .cmp-providerresultcountbar_block {
+    max-width: $container-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $mobile-padding-x-small $mobile-padding-x-small;
+
+    .cmp-providerresultcountbar__text {
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-providerresultcountbar {
+    margin-left: auto;
+    margin-right: auto;
+
+    .cmp-providerresultcountbar_block {
+      padding-right: $mobile-padding-small;
+      padding-left: $mobile-padding-small;
+    }
+  }
+}
+
+@media (min-width: $desktop+1) {
+
+  .cmp-providerresultcountbar {
+
+    .cmp-providerresultcountbar_block {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

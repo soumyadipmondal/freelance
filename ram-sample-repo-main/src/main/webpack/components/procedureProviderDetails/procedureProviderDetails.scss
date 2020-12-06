@@ -1,0 +1,177 @@
+@import "../../site/_variables.scss";
+
+.cmp-procedureProviderDetails {
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  padding: $mobile-padding-x-small;
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .cmp-procedureDescription_block {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .cmp-procedureDescription_heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .cmp-text__paragraph {
+
+    p {
+      font-size: 16px;
+      margin-bottom: 0;
+      display: block;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .cmp-procedureProviderDetails_container {
+    padding: 0;
+  }
+
+  .cmp-procedureProviderDetails_block {
+    display: flex;
+  }
+
+  .cmp-procedureProviderDetails_icon-container {
+    display: none;
+  }
+
+  .cmp-procedureProviderDetails_icon-block {
+    border: 1px solid $primary-grey-light;
+    border-radius: 50%;
+    margin-right: $mobile-padding-x-small;
+
+    img {
+      height: 85px;
+      width: 85px;
+      padding: 25px;
+    }
+  }
+
+  .cmp-procedureProviderDetails_provider-block {
+    padding: 0;
+
+    i {
+      color: $secondary-blue-dark;
+      margin-right: 5px;
+    }
+  }
+
+  .cmp-providerDetails_headline {
+    color: $secondary-blue-dark;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .cmp-providerDetails_provider-icon-heading {
+    display: flex;
+  }
+
+  .cmp-providerDetails_provider-icon {
+    height: 25px;
+    width: 25px;
+    display: block;
+    margin-right: 15px;
+  }
+
+  .cmp-providerDetails_provider-heading {
+    color: $primary-black;
+    margin: 0 0 10px 0;
+  }
+
+  .cmp-providerDetails_provider-address {
+    color: $primary-grey-dark;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .cmp-providerDetails_provider-misc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 15px;
+
+    .cmp-providerDetails_provider-phone {
+      margin-right: 30px;
+
+      a {
+        color: $primary-black;
+        text-decoration: none;
+      }
+    }
+
+    .cmp-providerDetails_provider-distance {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+
+  .cmp-procedureProviderDetails {
+
+    .cmp-procedureProviderDetails_icon-container {
+      display: block;
+    }
+
+    .cmp-providerDetails_provider-icon {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-procedureProviderDetails {
+    padding: $mobile-padding-x-small $mobile-padding-small;
+
+    .cmp-procedureProviderDetails_icon-container {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+
+  .cmp-procedureProviderDetails {
+
+    .cmp-procedureDescription_block {
+      padding-right: 15px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .cmp-procedureProviderDetails {
+
+    .cmp-procedureDescription_heading {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop+1) {
+
+  .cmp-procedureProviderDetails {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

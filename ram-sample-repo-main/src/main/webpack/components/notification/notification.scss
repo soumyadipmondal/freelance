@@ -1,0 +1,89 @@
+@import "../../site/_variables.scss";
+
+.cmp-notification {
+
+  &.referral {
+    background-color: $secondary-red-dark;
+  }
+
+  &.cob {
+    background-color: $secondary-orange;
+  }
+
+  &.osc {
+    background-color: $primary-blue-light;
+  }
+
+  &.lifeTimeMax {
+    background-color: $secondary-red-dark;
+  }
+
+  .cmp-notification_block {
+    max-width: $container-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px $mobile-padding-x-small;
+
+    i {
+      color: $primary-white;
+      margin-right: 15px;
+      margin-top: 2px;
+    }
+  }
+
+  .cmp-text__paragraph {
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      color: $primary-white;
+      margin-bottom: 0;
+
+      a {
+        color: $primary-white;
+        text-decoration: underline;
+      }
+
+      .popover-text {
+        border-bottom: 1px dashed $primary-white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-notification {
+    margin-left: auto;
+    margin-right: auto;
+
+    .cmp-notification_block {
+      padding-right: $mobile-padding-small;
+      padding-left: $mobile-padding-small;
+    }
+
+    .cmp-text__paragraph {
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop+1) {
+
+  .cmp-notification {
+
+    .cmp-notification_block {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
