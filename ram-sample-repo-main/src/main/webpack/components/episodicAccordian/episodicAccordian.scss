@@ -1,0 +1,358 @@
+@import "../../site/_variables.scss";
+
+.active{
+  background-color: rgba(243, 250, 253, 1);
+}
+
+.accordion{
+  background-color: rgba(248, 246, 248, 1);
+  .cmp-accordion {
+    padding: 0 3%;
+    max-width: 100%;
+  
+    >.row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  
+    .cmp-accordion_heading {
+      padding: 0;
+  
+      h2 {
+        margin-top: 20px;
+        color: $primary-black;
+      }
+    }
+  
+    .cmp-accordion_block {
+      padding: 0%;
+      width: 100%;
+  
+  
+      .cmp-accordion {
+        
+  
+        .cmp-accordion__item {
+          position: relative;
+          background: #fff;
+          width: 100%;
+          margin: 5% 0;
+          &.Pre-Surgery{
+            .cmp-accordion__header .cmp-accordion__button{
+              border-left: 3px solid rgba(0, 153, 204, 1);
+              box-shadow: 1px 5px 25px rgba(0,0,0,0.05);
+            }
+          }
+          &.Surgery{
+            .cmp-accordion__header .cmp-accordion__button{
+              border-left: 3px solid rgba(255, 153, 102, 1);
+              box-shadow: 1px 5px 25px rgba(0,0,0,0.05);
+            }
+          }
+          &.Follow-up{
+            .cmp-accordion__header .cmp-accordion__button{
+              border-left: 3px solid rgba(132, 187, 53, 1);
+              box-shadow: 1px 5px 25px rgba(0,0,0,0.05);
+            }
+          }
+  
+          .cmp-accordion__header {
+            font: inherit;
+  
+            .cmp-accordion__button {
+              position: relative;
+              border: 0;
+              padding: 1.5% 0;
+              background: 0;
+              font-size: 18px;
+              line-height: 24px;
+              cursor: pointer;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              text-align: left;
+              color: $primary-black;
+  
+              &:hover {
+                color: $primary-blue-light;
+              }
+
+              .cmp-accordion__title{
+                width: 88%;
+                span {
+                  &.heading{
+                    padding: 1% 4%;
+                    width: 38%;
+                    display: inline-block;
+                    border-right: 1px solid #ddd;
+                    font-family: 'Roboto-Black';
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 15px;
+                    color: #005172;
+                  }
+                  &.days{
+                    padding: 0% 2%;
+                    font-family: 'Roboto Light';
+                    font-weight: 300;
+                    font-style: normal;
+                    font-size: 15px;
+                    color: #666666;
+                    line-height: 20px;
+                  }
+                  &.amount{
+                    padding: 1% 2%;
+                    font-family: 'Roboto Bold';
+                    float: right;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 12px;
+                    color: #666666;
+                    text-align: right;
+                    line-height: 20px;
+                  }
+                }
+
+              }
+  
+              .cmp-accordion__icon {
+                color: #000;
+                width: 9%;
+  
+                &:before {
+                  content: '\f107';
+                  font-size: 30px;
+                }
+              }
+            }
+  
+            .cmp-accordion__button--expanded {
+              
+  
+              .cmp-accordion__icon:before {
+                color: $primary-blue-light;
+                content: '\f106';
+              }
+            }
+          }
+  
+          .cmp-accordion__panel {
+            padding: 12px 0;
+  
+            >.container {
+              padding-right: 0;
+              padding-left: 0;
+              margin: 0;
+              max-width: 100%;
+  
+              p {
+                color: $primary-grey-dark;
+                font-size: 14px;
+                color: #666;
+                &:first-child{
+                  font-size: 14px;
+                  color: #666;
+                }
+                &.textHeading{
+                  font-size: 18px;
+                  color: #005172;
+                }
+                &.textContent{
+                  font-size: 14px;
+                  color: #666;
+                }
+              }
+            }
+          }
+  
+          .cmp-accordion__panel--expanded {
+            display: block;
+          }
+  
+          .cmp-accordion__panel--hidden {
+            display: none;
+          }
+        }
+      }
+  
+      .show-all.showmore-hidden {
+        display: none;
+      }
+  
+      button.cmp-link__text {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $primary-blue-light;
+        font-size: 14px;
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: $primary-white;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+  }
+  
+  .cmp-accordion__panel {
+    border-top: 1px solid #ddd;
+    .text{
+      padding-top: 2.5%;
+      .cmp-text{
+        padding: 0 9%;
+        
+        .textHeading{
+          span{
+            float: right;
+          }
+        }
+        .textContent{
+          margin: 0 0 3% 0;
+          padding: 0 20% 3% 0;
+          border-bottom: 1px solid #aaa;
+        }
+        .note{
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: $tablet) {
+  .cmp-accordion__item {
+    .cmp-accordion__header {
+      .cmp-accordion__button {
+        .cmp-accordion__icon {
+          width: 7%;
+        }
+      }
+    }
+  }
+  .cmp-accordion__panel {
+    border-top: 1px solid #ddd;
+    .text{
+      padding-top: 2.5%;
+      .cmp-text{
+        padding: 0 9%;
+        .textHeading{
+          font-size: 18px !important;
+          span{
+            float: right;
+          }
+        }
+        .textContent{
+          margin: 0 0 3% 0;
+          padding: 0 20% 3% 0;
+          border-bottom: 1px solid #aaa;
+        }
+        .note{
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  
+  .cmp-accordion__item {
+    .cmp-accordion__header {
+      .cmp-accordion__button {
+        .cmp-accordion__icon {
+          width: 7%;
+        }
+      }
+    }
+  }
+  .cmp-accordion__button {
+    .cmp-accordion__title {
+      padding: 1.5% 0;
+    }
+  }
+  .accordion {
+    .cmp-accordion {
+      .cmp-accordion_block {
+        .cmp-accordion {
+          .cmp-accordion__item {
+            .cmp-accordion__header {
+              .cmp-accordion__button {
+                .cmp-accordion__title {
+                  span{
+                    &.heading {
+                      font-size: 26px !important;
+                      padding: 1% 0 1% 10%;
+                    }
+                    &.days {
+                      font-size: 24px !important;
+                    }
+                    &.amount {
+                      font-size: 22px !important;
+                    }
+                  }
+                }
+                .cmp-accordion__icon{
+                  &:before {
+                    font-size: 44px !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .accordion .cmp-accordion .cmp-accordion_block .cmp-accordion .cmp-accordion__item .cmp-accordion__header .cmp-accordion__button .cmp-accordion__icon:before {
+    font-size: 44px !important;
+  }
+  .cmp-accordion__panel {
+    border-top: 1px solid #ddd;
+    .text{
+      padding-top: 2.5%;
+      .cmp-text{
+        padding: 0 9%;
+        .textHeading{
+          font-size: 18px;
+          color: #005172;
+          span{
+            float: right;
+          }
+        }
+        .textContent{
+          margin: 0 0 3% 0;
+          padding: 0 20% 3% 0;
+          border-bottom: 1px solid #aaa;
+        }
+        .note{
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $wide-desktop) {
+  .cmp-accordion__button {
+    .cmp-accordion__title {
+      padding: 0;
+    }
+  }
+  .accordion {
+    .cmp-accordion {
+      .cmp-accordion_block {
+        .cmp-accordion {
+          .cmp-accordion__item {
+            margin: 5% 0;
+          }
+        }
+      }
+    }
+  }
+
+}

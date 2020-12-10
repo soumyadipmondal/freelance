@@ -148,6 +148,11 @@ module.exports = merge(common, {
             filename: 'modals.html',
             template: path.resolve(__dirname, SOURCE_ROOT + '/components/modals/modals.html'),
             inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'episodicAccordian.html',
+            template: path.resolve(__dirname, SOURCE_ROOT + '/components/episodicAccordian/episodicAccordian.html'),
+            inject: 'head'
         })
     ],
     devServer: {
