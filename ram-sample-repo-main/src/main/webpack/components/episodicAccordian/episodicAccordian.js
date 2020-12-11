@@ -1,6 +1,6 @@
 class Accordion {
     constructor(componentClassName) {
-        this.component = document.querySelector(componentClassName);
+        this.component = $(componentClassName);
         if (this.component !== null) { //Only proceed if component element is found on the page
             this.init();
         }
@@ -14,10 +14,10 @@ class Accordion {
         };
 
         const objects = {
-            accordionItem: [].slice.call(this.component.querySelectorAll(selectors.accordionItem)),
-            accordionBtn: [].slice.call(this.component.querySelectorAll(selectors.accordionBtn))
+            accordionItem: [].slice.call($(this.component).find(selectors.accordionItem)),
+            accordionBtn: [].slice.call($(this.component).find(selectors.accordionBtn))
         };
-    
+
         const toggleAccordionItem = (e) =>{
             const targetPanelElem=$(e.target).parents('.cmp-accordion__header').siblings('.cmp-accordion__panel');
             if($(targetPanelElem).hasClass('cmp-accordion__panel--hidden')){
@@ -30,13 +30,14 @@ class Accordion {
                 $(e.target).parents('.cmp-accordion__header').find('button.cmp-accordion__button').removeClass('cmp-accordion__button--expanded').attr('aria-expanded', false);
             }
         };
-
         objects.accordionBtn
-        .map(btn => {$(btn).on('click', toggleAccordionItem)});
+        .map(btn => {
+            $(btn).on('click', toggleAccordionItem)
+        });
     }
 }
 
 //Create class after DOM content load
-document.addEventListener('DOMContentLoaded', () => {
+$(document).on('DOMContentLoaded', () => {
     new Accordion('.cmp-accordion');
 });
