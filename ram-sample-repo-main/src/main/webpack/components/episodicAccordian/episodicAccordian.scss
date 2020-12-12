@@ -1,12 +1,15 @@
 @import "../../site/_variables.scss";
+@import "../../site/styles/global.scss";
 
 .active{
-  background-color: rgba(243, 250, 253, 1);
+  background-color: $secondary-blue-light;
+  opacity: 1;
 }
 
 .accordion{
-  background-color: rgba(248, 246, 248, 1);
-  .cmp-accordion {
+  background-color: $bg-accordian;
+  opacity: 1;
+  .cmpAccordion {
     padding: 0 3%;
     max-width: 100%;
   
@@ -15,7 +18,7 @@
       margin-left: 0;
     }
   
-    .cmp-accordion_heading {
+    .cmpAccordionHeading {
       padding: 0;
   
       h2 {
@@ -24,42 +27,48 @@
       }
     }
   
-    .cmp-accordion_block {
+    .cmpAccordionBlock {
       padding: 0%;
       width: 100%;
   
   
-      .cmp-accordion {
+      .cmpAccordion {
         
   
-        .cmp-accordion__item {
+        .cmpAccordionItem {
           position: relative;
-          background: #fff;
+          background: $color-background;
           width: 100%;
           margin: 5% 0;
-          &.Pre-Surgery{
-            .cmp-accordion__header .cmp-accordion__button{
-              border-left: 3px solid rgba(0, 153, 204, 1);
-              box-shadow: 1px 5px 25px rgba(0,0,0,0.05);
+          &.preSurgery{
+            .cmpAccordionHeader {
+              .cmpAccordionButton{
+                border-left: 3px solid $side-border-blue;
+                box-shadow: 1px 5px 25px $opacity;
+              }
             }
           }
           &.Surgery{
-            .cmp-accordion__header .cmp-accordion__button{
-              border-left: 3px solid rgba(255, 153, 102, 1);
-              box-shadow: 1px 5px 25px rgba(0,0,0,0.05);
+            .cmpAccordionHeader {
+              .cmpAccordionButton{
+                border-left: 3px solid $side-border-orange;
+                box-shadow: 1px 5px 25px $opacity;
+              }
             }
           }
-          &.Follow-up{
-            .cmp-accordion__header .cmp-accordion__button{
-              border-left: 3px solid rgba(132, 187, 53, 1);
-              box-shadow: 1px 5px 25px rgba(0,0,0,0.05);
+          &.followUp{
+            .cmpAccordionHeader {
+              .cmpAccordionButton{
+                border-left: 3px solid $side-border-green;
+                box-shadow: 1px 5px 25px $opacity;
+              }
             }
           }
   
-          .cmp-accordion__header {
+          .cmpAccordionHeader {
             font: inherit;
   
-            .cmp-accordion__button {
+            .cmpAccordionButton {
               position: relative;
               border: 0;
               padding: 1.5% 0;
@@ -79,37 +88,34 @@
                 color: $primary-blue-light;
               }
 
-              .cmp-accordion__title{
+              .cmpAccordionTitle{
                 width: 88%;
                 span {
                   &.heading{
                     padding: 1% 4%;
                     width: 38%;
                     display: inline-block;
-                    border-right: 1px solid #ddd;
-                    font-family: 'Roboto-Black';
+                    border-right: 1px solid $heading-border;
                     font-weight: 400;
                     font-style: normal;
-                    font-size: 15px;
-                    color: #005172;
+                    font-size: 14px;
+                    color: $heading-color;
                   }
                   &.days{
                     padding: 0% 2%;
-                    font-family: 'Roboto Light';
                     font-weight: 300;
                     font-style: normal;
-                    font-size: 15px;
-                    color: #666666;
+                    font-size: 14px;
+                    color: $primary-grey-dark;
                     line-height: 20px;
                   }
                   &.amount{
                     padding: 1% 2%;
-                    font-family: 'Roboto Bold';
                     float: right;
                     font-weight: 700;
                     font-style: normal;
-                    font-size: 12px;
-                    color: #666666;
+                    font-size: 14px;
+                    color:$primary-grey-dark;
                     text-align: right;
                     line-height: 20px;
                   }
@@ -117,8 +123,8 @@
 
               }
   
-              .cmp-accordion__icon {
-                color: #000;
+              .cmpAccordionIcon {
+                color: $icon-color;
                 width: 9%;
   
                 &:before {
@@ -128,17 +134,17 @@
               }
             }
   
-            .cmp-accordion__button--expanded {
+            .cmpAccordionButtonExpanded {
               
   
-              .cmp-accordion__icon:before {
+              .cmpAccordionIcon:before {
                 color: $primary-blue-light;
                 content: '\f106';
               }
             }
           }
   
-          .cmp-accordion__panel {
+          .cmpAccordionPanel {
             padding: 12px 0;
   
             >.container {
@@ -150,38 +156,34 @@
               p {
                 color: $primary-grey-dark;
                 font-size: 14px;
-                color: #666;
+                color: $primary-grey-dark;
                 &:first-child{
                   font-size: 14px;
-                  color: #666;
+                  color: $primary-grey-dark;
                 }
                 &.textHeading{
                   font-size: 18px;
-                  color: #005172;
+                  color: $heading-color;
                 }
                 &.textContent{
                   font-size: 14px;
-                  color: #666;
+                  color: $primary-grey-dark;
                 }
               }
             }
           }
   
-          .cmp-accordion__panel--expanded {
+          .cmpAccordionPanelExpanded {
             display: block;
           }
   
-          .cmp-accordion__panel--hidden {
+          .cmpAccordionPanelHidden {
             display: none;
           }
         }
       }
   
-      .show-all.showmore-hidden {
-        display: none;
-      }
-  
-      button.cmp-link__text {
+      button.cmpLinkText {
         font-weight: bold;
         text-transform: uppercase;
         color: $primary-blue-light;
@@ -199,11 +201,11 @@
   
   }
   
-  .cmp-accordion__panel {
-    border-top: 1px solid #ddd;
+  .cmpAccordionPanel {
+    border-top: 1px solid $heading-border;
     .text{
       padding-top: 2.5%;
-      .cmp-text{
+      .cmpText{
         padding: 0 9%;
         
         .textHeading{
@@ -214,10 +216,10 @@
         .textContent{
           margin: 0 0 3% 0;
           padding: 0 20% 3% 0;
-          border-bottom: 1px solid #aaa;
+          border-bottom: 1px solid $border;
         }
         .note{
-          color: #ddd;
+          color: $heading-border;
         }
       }
     }
@@ -226,23 +228,23 @@
 
 
 @media (min-width: $tablet) {
-  .cmp-accordion__item {
-    .cmp-accordion__header {
-      .cmp-accordion__button {
-        .cmp-accordion__icon {
+  .cmpAccordionIitem {
+    .cmpAccordionHeader {
+      .cmpAccordionButton {
+        .cmpAccordionIcon {
           width: 7%;
         }
       }
     }
   }
-  .cmp-accordion__panel {
-    border-top: 1px solid #ddd;
+  .cmpAccordionPanel {
+    border-top: 1px solid $heading-border;
     .text{
       padding-top: 2.5%;
-      .cmp-text{
+      .cmpText{
         padding: 0 9%;
         .textHeading{
-          font-size: 18px !important;
+          font-size: 18px;
           span{
             float: right;
           }
@@ -250,10 +252,10 @@
         .textContent{
           margin: 0 0 3% 0;
           padding: 0 20% 3% 0;
-          border-bottom: 1px solid #aaa;
+          border-bottom: 1px solid $border;
         }
         .note{
-          color: #ddd;
+          color: $heading-border;
         }
       }
     }
@@ -261,44 +263,44 @@
 }
 @media (min-width: $desktop) {
   
-  .cmp-accordion__item {
-    .cmp-accordion__header {
-      .cmp-accordion__button {
-        .cmp-accordion__icon {
+  .cmpAccordionItem {
+    .cmpAccordionHeader {
+      .cmpAccordionButton {
+        .cmpAccordionIcon {
           width: 7%;
         }
       }
     }
   }
-  .cmp-accordion__button {
-    .cmp-accordion__title {
+  .cmpAccordionButton {
+    .cmpAccordionTtitle {
       padding: 1.5% 0;
     }
   }
   .accordion {
-    .cmp-accordion {
-      .cmp-accordion_block {
-        .cmp-accordion {
-          .cmp-accordion__item {
-            .cmp-accordion__header {
-              .cmp-accordion__button {
-                .cmp-accordion__title {
+    .cmpAccordion {
+      .cmpAccordionBlock {
+        .cmpAccordion {
+          .cmpAccordionItem {
+            .cmpAccordionHeader {
+              .cmpAccordionButton {
+                .cmpAccordionTitle {
                   span{
                     &.heading {
-                      font-size: 26px !important;
+                      font-size: 26px;
                       padding: 1% 0 1% 10%;
                     }
                     &.days {
-                      font-size: 24px !important;
+                      font-size: 24px;
                     }
                     &.amount {
-                      font-size: 22px !important;
+                      font-size: 22px;
                     }
                   }
                 }
-                .cmp-accordion__icon{
+                .cmpAccordionIcon{
                   &:before {
-                    font-size: 44px !important;
+                    font-size: 44px;
                   }
                 }
               }
@@ -309,18 +311,15 @@
     }
   }
   
-  .accordion .cmp-accordion .cmp-accordion_block .cmp-accordion .cmp-accordion__item .cmp-accordion__header .cmp-accordion__button .cmp-accordion__icon:before {
-    font-size: 44px !important;
-  }
-  .cmp-accordion__panel {
-    border-top: 1px solid #ddd;
+  .cmpAccordionPanel {
+    border-top: 1px solid $heading-border;
     .text{
       padding-top: 2.5%;
-      .cmp-text{
+      .cmpText{
         padding: 0 9%;
         .textHeading{
           font-size: 18px;
-          color: #005172;
+          color: $heading-color;
           span{
             float: right;
           }
@@ -328,26 +327,26 @@
         .textContent{
           margin: 0 0 3% 0;
           padding: 0 20% 3% 0;
-          border-bottom: 1px solid #aaa;
+          border-bottom: 1px solid $border;
         }
         .note{
-          color: #ddd;
+          color: $heading-border;
         }
       }
     }
   }
 }
 @media (min-width: $wide-desktop) {
-  .cmp-accordion__button {
-    .cmp-accordion__title {
+  .cmpAccordionButton {
+    .cmpAccordionTitle {
       padding: 0;
     }
   }
   .accordion {
-    .cmp-accordion {
-      .cmp-accordion_block {
-        .cmp-accordion {
-          .cmp-accordion__item {
+    .cmpAccordion {
+      .cmpAccordionBlock {
+        .cmpAccordion {
+          .cmpAccordionItem {
             margin: 5% 0;
           }
         }

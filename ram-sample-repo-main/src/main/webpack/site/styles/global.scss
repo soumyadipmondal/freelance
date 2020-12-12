@@ -317,6 +317,9 @@ h6 {
   }
 }
 
+.heading, .days, .amount {
+  font-family: $roboto-font-family;
+}
 @media (max-width: ($tablet)-1) {
 
   .generic-modal {

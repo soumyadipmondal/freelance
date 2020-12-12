@@ -9,8 +9,8 @@ class Accordion {
     init() {
 
         const selectors = {
-            accordionItem: '.cmp-accordion__item',
-            accordionBtn: '.cmp-accordion__button'
+            accordionItem: '.cmpAccordionItem',
+            accordionBtn: '.cmpAccordionButton'
         };
 
         const objects = {
@@ -19,15 +19,15 @@ class Accordion {
         };
 
         const toggleAccordionItem = (e) =>{
-            const targetPanelElem=$(e.target).parents('.cmp-accordion__header').siblings('.cmp-accordion__panel');
-            if($(targetPanelElem).hasClass('cmp-accordion__panel--hidden')){
-                $(targetPanelElem).removeClass('cmp-accordion__panel--hidden').addClass('cmp-accordion__panel--expanded');
-                $(e.target).parents('.cmp-accordion__header').addClass('active');
-                $(e.target).parents('.cmp-accordion__header').find('button.cmp-accordion__button').addClass('cmp-accordion__button--expanded').attr('aria-expanded', true);
+            const targetPanelElem=$(e.target).parents('.cmpAccordionHeader').siblings('.cmpAccordionPanel');
+            if($(targetPanelElem).hasClass('cmpAccordionPanelHidden')){
+                $(targetPanelElem).removeClass('cmpAccordionPanelHidden').addClass('cmpAccordionPanelExpanded');
+                $(e.target).parents('.cmpAccordionHeader').addClass('active');
+                $(e.target).parents('.cmpAccordionHeader').find('button.cmpAccordionButton').addClass('cmpAccordionButtonExpanded').attr('aria-expanded', true);
             }else{
-                $(targetPanelElem).addClass('cmp-accordion__panel--hidden').removeClass('cmp-accordion__panel--expanded');
-                $(e.target).parents('.cmp-accordion__header').removeClass('active');
-                $(e.target).parents('.cmp-accordion__header').find('button.cmp-accordion__button').removeClass('cmp-accordion__button--expanded').attr('aria-expanded', false);
+                $(targetPanelElem).addClass('cmpAccordionPanelHidden').removeClass('cmpAccordionPanelExpanded');
+                $(e.target).parents('.cmpAccordionHeader').removeClass('active');
+                $(e.target).parents('.cmpAccordionHeader').find('button.cmpAccordionButton').removeClass('cmpAccordionButtonExpanded').attr('aria-expanded', false);
             }
         };
         objects.accordionBtn
@@ -39,5 +39,5 @@ class Accordion {
 
 //Create class after DOM content load
 $(document).on('DOMContentLoaded', () => {
-    new Accordion('.cmp-accordion');
+    new Accordion('.cmpAccordion');
 });
