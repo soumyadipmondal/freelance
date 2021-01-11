@@ -1,306 +1,394 @@
 @import "../../site/_variables.scss";
 @import "../../site/styles/global.scss";
 
-.active{
-  background-color: $secondary-blue-light;
-  opacity: 1;
-}
 
-.accordion{
-  background-color: $bg-accordian;
-  opacity: 1;
-  .cmpAccordion {
-    padding: 0 3%;
-    max-width: 100%;
-  
-    >.row {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  
-    .cmpAccordionHeading {
-      padding: 0;
-  
-      h2 {
-        margin-top: 20px;
-        color: $primary-black;
-      }
-    }
-  
-    .cmpAccordionBlock {
-      padding: 0%;
-      width: 100%;
-  
-  
-      .cmpAccordion {
-        
-  
-        .cmpAccordionItem {
-          position: relative;
-          background: $color-background;
-          width: 100%;
-          margin: 5% 0;
-          &.preSurgery{
-            .cmpAccordionHeader {
-              .cmpAccordionButton{
-                border-left: 3px solid $side-border-blue;
-                box-shadow: 1px 5px 25px $opacity;
-              }
+  .accordion{
+    padding: 2% 0;
+    background-color: $bg-accordian;
+    .panel-group{
+      width: 75%;
+      margin: 0px auto;
+      .panel-heading{
+        position: relative;
+        background: $color-background;
+        width: 100%;
+        margin: 5% 0 0 0;
+        box-shadow: 1px 5px 25px $opacity;
+        .panel-title{
+          margin-top: 2%;
+          a{
+            text-decoration: none;
+
+            &:hover{
+              text-decoration: none;
             }
-          }
-          &.Surgery{
-            .cmpAccordionHeader {
-              .cmpAccordionButton{
-                border-left: 3px solid $side-border-orange;
-                box-shadow: 1px 5px 25px $opacity;
-              }
+            &:active{
+              text-decoration: none;
             }
-          }
-          &.followUp{
-            .cmpAccordionHeader {
-              .cmpAccordionButton{
-                border-left: 3px solid $side-border-green;
-                box-shadow: 1px 5px 25px $opacity;
-              }
+            &:focus{
+              text-decoration: none;
             }
-          }
-  
-          .cmpAccordionHeader {
-            font: inherit;
-  
             .cmpAccordionButton {
-              position: relative;
-              border: 0;
-              padding: 1.5% 0;
-              background: 0;
-              font-size: 18px;
-              line-height: 24px;
-              cursor: pointer;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-              width: 100%;
-              text-align: left;
-              color: $primary-black;
-  
-              &:hover {
-                color: $primary-blue-light;
-              }
-
-              .cmpAccordionTitle{
-                width: 88%;
-                span {
-                  &.heading{
-                    padding: 1% 4%;
-                    width: 38%;
-                    display: inline-block;
-                    border-right: 1px solid $heading-border;
-                    font-weight: 400;
-                    font-style: normal;
-                    font-size: 14px;
-                    color: $heading-color;
-                  }
-                  &.days{
-                    padding: 0% 2%;
-                    font-weight: 300;
-                    font-style: normal;
-                    font-size: 14px;
-                    color: $primary-grey-dark;
-                    line-height: 20px;
-                  }
-                  &.amount{
-                    padding: 1% 2%;
-                    float: right;
-                    font-weight: 700;
-                    font-style: normal;
-                    font-size: 14px;
-                    color:$primary-grey-dark;
-                    text-align: right;
-                    line-height: 20px;
-                  }
-                }
-
-              }
-  
-              .cmpAccordionIcon {
-                color: $icon-color;
-                width: 9%;
-  
-                &:before {
-                  content: '\f107';
-                  font-size: 30px;
-                }
-              }
+                position: relative;
+                border: 0;
+                padding: 2% 0;
+                background: 0;
+                font-size: 18px;
+                line-height: 24px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                text-align: left;
+                color: $primary-black;
+                background-color: $secondary-blue-light;
+            
+            &.preSurgery{
+                border-left: 3px solid $side-border-blue;
             }
-  
-            .cmpAccordionButtonExpanded {
-              
-  
-              .cmpAccordionIcon:before {
-                color: $primary-blue-light;
-                content: '\f106';
-              }
+            &.Surgery{
+                border-left: 3px solid $side-border-orange;
             }
-          }
-  
-          .cmpAccordionPanel {
-            padding: 12px 0;
-  
-            >.container {
-              padding-right: 0;
-              padding-left: 0;
-              margin: 0;
-              max-width: 100%;
-  
-              p {
-                color: $primary-grey-dark;
-                font-size: 14px;
-                color: $primary-grey-dark;
-                &:first-child{
+            &.followUp{
+                border-left: 3px solid $side-border-green;
+            }
+            &:hover {
+                color: $primary-blue-light;
+            }
+            .cmpAccordionTitle {
+              width: 50%;
+
+              span {
+                &.heading{
+                  padding: 1% 14%;
+                  display: block;
+                  border-right: 0px solid $heading-border;
+                  font-weight: 400;
+                  font-style: normal;
+                  font-size: 14px;
+                  color: $heading-color;
+                  text-decoration: none;
+                }
+                &.days{
+                  padding: 1% 14%;
+                  display: block;
+                  font-weight: 300;
+                  font-style: normal;
                   font-size: 14px;
                   color: $primary-grey-dark;
+                  line-height: 20px;
+                  text-decoration: none;
+                }
+              }
+            }
+            .rightTile{
+              width: 50%;
+
+              span {
+                &.amount{
+                  padding: 0% 12% 0 0;
+                  display: block;
+                  width: 100%;
+                  text-align: right;
+                  float: right;
+                  font-weight: 700;
+                  font-style: normal;
+                  font-size: 14px;
+                  color:$primary-grey-dark;
+                  text-align: right;
+                  line-height: 23px;
+                  text-decoration: none;
+                }
+                &.cmpAccordionIcon {
+                  display: block;
+                  text-align: right;
+                  width: 100%;
+                  padding: 0 14% 0 0;
+                  color: $primary-blue-light;
+                  text-decoration: none;
+      
+                  &:before {
+                    content: '\f106';
+                    font-size: 25px;
+                  }
+                }
+              }
+            }
+            }
+            &.collapsed {
+              .cmpAccordionButton{
+                background-color: $color-background;
+                .rightTile {
+                  .cmpAccordionIcon:before {
+                    color: $icon-color;
+                    content: '\f107';
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .panel-collapse{
+        border-top: 1px solid $heading-border;
+        background-color: $color-background;
+        margin-top: -7px;
+        .text{
+          padding: 2.5% 0;
+          .cmpText {
+            padding: 0 7.5%;
+
+            p {
+              color: $primary-grey-dark;
+              font-size: 14px;
+              &.textnote{
+                margin-top: 4%;
+                font-size: 14px;
+                color: $primary-grey-dark;
+                .show_hide{
+                  text-decoration: none;
+                  &:hover{
+                    text-decoration: none;
+                  }
+                  &:active{
+                    text-decoration: none;
+                  }
+                  &:focus{
+                    text-decoration: none;
+                  }
+                }
+                span{
+                  display:inline;
+                }
+              }
+              &.textHeading{
+                font-size: 15px;
+                color: $heading-color;
+                span{
+                  float: right;
+                  color:$color-foreground;
+                }
+              }
+              &.textContent{
+                font-size: 14px;
+                color: $primary-grey-dark;
+                padding-bottom: 9%;
+                margin-bottom: 4%;
+                border-bottom: 1px solid $heading-border;
+                .show_hide{
+                  text-decoration: none;
+                  &:hover{
+                    text-decoration: none;
+                  }
+                  &:active{
+                    text-decoration: none;
+                  }
+                  &:focus{
+                    text-decoration: none;
+                  }
+                }
+                span{
+                  display:inline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: $tablet) {
+    .accordion{
+      .panel-group{
+        .panel-heading{
+          .panel-title{
+            margin-top: 5%;
+            a{
+              .cmpAccordionButton {
+                .cmpAccordionTitle {
+                  width: 86%;
+                  span { 
+                    
+                    &.heading{
+                      padding: 1% 11%;
+                      font-size: 28px;
+                      display: inline-block;
+                      border-right: 1px solid #dddddd;
+                    }
+                    &.days{
+                      font-size: 24px;
+                      display: inline-block;
+                      padding: 1% 7%;
+                    }
+                  }
+                }
+                .rightTile{
+                  span {
+                    &.amount{
+                      padding: 8% 14% 6%;
+                      width: 80%;
+                      font-size: 18px;
+                      line-height: 20px;
+                      display: inline-block;
+                      float: left;
+                    }
+                    &.cmpAccordionIcon {
+                      width: 9%;
+                      padding: 3% 14% 0 0;
+                      display: inline-block;
+                      text-align: left;
+          
+                      &:before {
+                        font-size: 45px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .panel-collapse{
+          .text{
+            .cmpText {
+              padding: 0 13% 0 7.5%;
+              p {
+                font-size: 14px;
+                &.textnote{
+                  font-size: 14px;
+                  padding: 0 19% 0 0;
+                  line-height: 30px;
+                  .show_hide{
+                    text-decoration: none;
+                    &:hover{
+                      text-decoration: none;
+                    }
+                    &:active{
+                      text-decoration: none;
+                    }
+                    &:focus{
+                      text-decoration: none;
+                    }
+                  }
+                  span{
+                    display:inline;
+                  }
                 }
                 &.textHeading{
                   font-size: 18px;
-                  color: $heading-color;
                 }
                 &.textContent{
                   font-size: 14px;
-                  color: $primary-grey-dark;
+                  padding: 0 24% 4% 0;
+                  .show_hide{
+                    text-decoration: none;
+                    &:hover{
+                      text-decoration: none;
+                    }
+                    &:active{
+                      text-decoration: none;
+                    }
+                    &:focus{
+                      text-decoration: none;
+                    }
+                  }
+                  span{
+                    display:inline;
+                  }
                 }
               }
             }
           }
-  
-          .cmpAccordionPanelExpanded {
-            display: block;
-          }
-  
-          .cmpAccordionPanelHidden {
-            display: none;
-          }
-        }
-      }
-  
-      button.cmpLinkText {
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $primary-blue-light;
-        font-size: 14px;
-        cursor: pointer;
-        border: 0;
-        padding: 0;
-        background-color: $primary-white;
-  
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  
-  }
-  
-  .cmpAccordionPanel {
-    border-top: 1px solid $heading-border;
-    .text{
-      padding-top: 2.5%;
-      .cmpText{
-        padding: 0 9%;
-        
-        .textHeading{
-          span{
-            float: right;
-          }
-        }
-        .textContent{
-          margin: 0 0 3% 0;
-          padding: 0 20% 3% 0;
-          border-bottom: 1px solid $border;
-        }
-        .note{
-          color: $heading-border;
         }
       }
     }
   }
-}
-
-
-@media (min-width: $tablet) {
-  .cmpAccordionIitem {
-    .cmpAccordionHeader {
-      .cmpAccordionButton {
-        .cmpAccordionIcon {
-          width: 7%;
-        }
-      }
-    }
-  }
-  .cmpAccordionPanel {
-    border-top: 1px solid $heading-border;
-    .text{
-      padding-top: 2.5%;
-      .cmpText{
-        padding: 0 9%;
-        .textHeading{
-          font-size: 18px;
-          span{
-            float: right;
-          }
-        }
-        .textContent{
-          margin: 0 0 3% 0;
-          padding: 0 20% 3% 0;
-          border-bottom: 1px solid $border;
-        }
-        .note{
-          color: $heading-border;
-        }
-      }
-    }
-  }
-}
-@media (min-width: $desktop) {
-  
-  .cmpAccordionItem {
-    .cmpAccordionHeader {
-      .cmpAccordionButton {
-        .cmpAccordionIcon {
-          width: 7%;
-        }
-      }
-    }
-  }
-  .cmpAccordionButton {
-    .cmpAccordionTtitle {
-      padding: 1.5% 0;
-    }
-  }
-  .accordion {
-    .cmpAccordion {
-      .cmpAccordionBlock {
-        .cmpAccordion {
-          .cmpAccordionItem {
-            .cmpAccordionHeader {
+  @media (min-width: $desktop) {
+    .accordion{
+      .panel-group{
+        .panel-heading{
+          .panel-title{
+            a{
               .cmpAccordionButton {
                 .cmpAccordionTitle {
-                  span{
-                    &.heading {
+                  width: 80%;
+                  span {
+                    &.heading{
+                      padding: 1% 11%;
                       font-size: 26px;
-                      padding: 1% 0 1% 10%;
+                      width: 53%;
                     }
-                    &.days {
-                      font-size: 24px;
-                    }
-                    &.amount {
-                      font-size: 22px;
+                    &.days{
+                      font-size: 26px;
                     }
                   }
                 }
-                .cmpAccordionIcon{
-                  &:before {
-                    font-size: 44px;
+                .rightTile{
+                  span {
+                    &.amount{
+                      padding: 7% 10%;
+                      width: 77%;
+                      font-size: 22px;
+                      line-height: 20px;
+                    }
+                    &.cmpAccordionIcon {
+                      width: 7%;
+          
+                      &:before {
+                        font-size: 45px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .panel-collapse{
+          .text{
+            .cmpText {
+              padding: 0 12.5% 0 7.5%;
+              p {
+                font-size: 14px;
+                &.textnote{
+                  font-size: 14px;
+                  .show_hide{
+                    text-decoration: none;
+                    &:hover{
+                      text-decoration: none;
+                    }
+                    &:active{
+                      text-decoration: none;
+                    }
+                    &:focus{
+                      text-decoration: none;
+                    }
+                  }
+                  span{
+                    display:inline;
+                  }
+                }
+                &.textHeading{
+                  font-size: 18px;
+                }
+                &.textContent{
+                  font-size: 14px;
+                  .show_hide{
+                    text-decoration: none;
+                    &:hover{
+                      text-decoration: none;
+                    }
+                    &:active{
+                      text-decoration: none;
+                    }
+                    &:focus{
+                      text-decoration: none;
+                    }
+                  }
+                  span{
+                    display:inline;
                   }
                 }
               }
@@ -310,48 +398,102 @@
       }
     }
   }
-  
-  .cmpAccordionPanel {
-    border-top: 1px solid $heading-border;
-    .text{
-      padding-top: 2.5%;
-      .cmpText{
-        padding: 0 9%;
-        .textHeading{
-          font-size: 18px;
-          color: $heading-color;
-          span{
-            float: right;
+  @media (min-width: $wide-desktop) {
+    .accordion{
+      .panel-group{
+        .panel-heading{
+          .panel-title{
+            a{
+              .cmpAccordionButton {
+                .cmpAccordionTitle {
+                  width: 85%;
+                  span {
+                    &.heading{
+                      padding: 1% 11%;
+                      width: 45%;
+                      font-size: 30px;
+                    }
+                    &.days{
+                      font-size: 30px;
+                    }
+                  }
+                }
+                .rightTile{
+                  span {
+                    &.amount{
+                      padding: 6% 8% 5%;
+                      font-size: 28px;
+                      line-height: 20px;
+                    }
+                    &.cmpAccordionIcon {
+                      width: 7%;
+          
+                      &:before {
+                        font-size: 50px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
-        .textContent{
-          margin: 0 0 3% 0;
-          padding: 0 20% 3% 0;
-          border-bottom: 1px solid $border;
-        }
-        .note{
-          color: $heading-border;
-        }
-      }
-    }
-  }
-}
-@media (min-width: $wide-desktop) {
-  .cmpAccordionButton {
-    .cmpAccordionTitle {
-      padding: 0;
-    }
-  }
-  .accordion {
-    .cmpAccordion {
-      .cmpAccordionBlock {
-        .cmpAccordion {
-          .cmpAccordionItem {
-            margin: 5% 0;
+        .panel-collapse{
+          .text{
+            .cmpText {
+              padding: 0 12.5% 0 7.5%;
+              p {
+                font-size: 20px;
+                &.textnote{
+                  font-size: 20px;
+                  .show_hide{
+                    text-decoration: none;
+                    &:hover{
+                      text-decoration: none;
+                    }
+                    &:active{
+                      text-decoration: none;
+                    }
+                    &:focus{
+                      text-decoration: none;
+                    }
+                  }
+                  span{
+                    display:inline;
+                  }
+                }
+                &.textHeading{
+                  font-size: 24px;
+                }
+                &.textContent{
+                  font-size: 20px;
+                  .show_hide{
+                    text-decoration: none;
+                    &:hover{
+                      text-decoration: none;
+                    }
+                    &:active{
+                      text-decoration: none;
+                    }
+                    &:focus{
+                      text-decoration: none;
+                    }
+                  }
+                  span{
+                    display:inline;
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
   }
 
-}
+
+
+
+
+
+
