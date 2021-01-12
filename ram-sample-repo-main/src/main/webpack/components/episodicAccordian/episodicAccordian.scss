@@ -379,9 +379,24 @@
                         text-align: left;
             
                         &:before {
-                          //content: '\f106';
-                          content: '\f054';
+                          content: '\f106';
                           font-size: 25px;
+                        }
+                      }
+                    }
+                    &.collapsed{
+                      span{
+                        &.cmpAccordionIcon {
+                          float: left;
+                          width: 4%;
+                          padding: 0% 3% 0 0;
+                          display: inline-block;
+                          color: $primary-blue-light;
+                          text-align: left;
+                          &:before {
+                            content: '\f054';
+                            font-size: 16px;
+                          }
                         }
                       }
                     }
@@ -393,7 +408,7 @@
                 font-size: 14px;
 
                 .texthead{
-                  padding: 0 25px 50px 25px;
+                  padding: 0 25px 50px 30px;
                 }
                 .tablecontent{
                   table{
@@ -437,11 +452,27 @@
                             text-align: right;
                           }
                           span{
+                            img{
+                              display: inline;
+                              margin: 0 10px 0 55px;
+                            }
                             &:last-child{
                               font-size: 14px;
                               font-style: italic;
                               color: $primary-grey-mid;
                               display: block;
+                            }
+                          }
+                        }
+                        &:nth-child(3){
+                          td{
+                            span{
+                              img{
+                                width: 10px;
+                                height: 10px;
+                                margin-top: -8px;
+                                margin-left: 60px;
+                              }
                             }
                           }
                         }
@@ -572,6 +603,22 @@
                         }
                       }
                     }
+                    &.collapsed{
+                      span{
+                        &.cmpAccordionIcon {
+                          float: left;
+                          width: 4%;
+                          padding: 0% 3% 0 0;
+                          display: inline-block;
+                          color: $primary-blue-light;
+                          text-align: left;
+                          &:before {
+                            content: '\f054';
+                            font-size: 16px;
+                          }
+                        }
+                      }
+                    }
                   }
                 }
                 
@@ -580,7 +627,7 @@
                 font-size: 14px;
 
                 .texthead{
-                  padding: 0 25px 50px 25px;
+                  padding: 0 25px 50px 30px;
                 }
                 .tablecontent{
                   table{
@@ -600,7 +647,14 @@
                             padding: 10px 0 10px 25px;
                             border-radius: 5px 0 0 0;
                           }
-
+                          &:nth-child(2){
+                            width:20%;
+                          }
+                          &:nth-child(3){
+                            width: 30%;
+                            text-align: center;
+                          }
+                          
                           &:last-child{
                             padding: 10px 25px 10px 0;
                             border-radius: 0 5px 0 0;
@@ -615,6 +669,30 @@
                           &:last-child{
                             font-size: 21px;
                             text-align: right;
+                          }
+                          span{
+                            img{
+                              display: inline;
+                              margin: 0 10px 0 55px;
+                            }
+                            &:last-child{
+                              font-size: 14px;
+                              font-style: italic;
+                              color: $primary-grey-mid;
+                              display: block;
+                            }
+                          }
+                        }
+                        &:nth-child(3){
+                          td{
+                            span{
+                              img{
+                                width: 10px;
+                                height: 10px;
+                                margin-top: -8px;
+                                margin-left: 60px;
+                              }
+                            }
                           }
                         }
                         &:last-child{
