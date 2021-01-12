@@ -217,6 +217,76 @@ h6 {
   justify-content: center;
 }
 
+.cta {
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 9px 30px;
+  margin: 0;
+}
+
+.cta-sm {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 700;
+  height: 40px;
+}
+
+.cta-md {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  height: 44px;
+}
+
+.cta-lg {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  height: 50px;
+}
+
+.cta-transparent {
+  color: $secondary-blue-dark;
+  background-color: transparent;
+
+  &:hover,
+  &:active {
+    color: $primary-blue-light;
+  }
+}
+
+.cta-white {
+  color: $secondary-blue-dark;
+  background-color: $primary-white;
+
+  &:hover,
+  &:active {
+    color: $primary-blue-light;
+    background-color: $primary-white;
+  }
+}
+
+.cta-blue {
+  color: $primary-white;
+  background-color: $secondary-blue-dark;
+
+  &:hover,
+  &:active {
+    background-color: $primary-blue-light;
+  }
+}
+
+.cta-green {
+  color: $primary-white;
+  background-color: $secondary-green-dark;
+
+  &:hover,
+  &:active {
+    background-color: $secondary-green-mid;
+  }
+}
+
 .cta-mid {
   font-size: 16px;
   line-height: 26px;
@@ -233,7 +303,6 @@ h6 {
   &:hover,
   &:active {
     color: $primary-blue-light;
-    //background-color: $primary-blue-light;
   }
 }
 
@@ -320,6 +389,7 @@ h6 {
 .heading, .days, .amount {
   font-family: $roboto-font-family;
 }
+
 @media (max-width: ($tablet)-1) {
 
   .generic-modal {

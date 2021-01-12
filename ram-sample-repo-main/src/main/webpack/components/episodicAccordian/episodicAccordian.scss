@@ -2,7 +2,7 @@
 @import "../../site/styles/global.scss";
 
 
-  .accordion{
+  .episodicAccordion{
     padding: 2% 0;
     background-color: $bg-accordian;
     .panel-group{
@@ -143,6 +143,7 @@
             p {
               color: $primary-grey-dark;
               font-size: 14px;
+              margin-top: 4%;
               &.textnote{
                 margin-top: 4%;
                 font-size: 14px;
@@ -200,7 +201,7 @@
     }
   }
   @media (min-width: $tablet) {
-    .accordion{
+    .episodicAccordion{
       .panel-group{
         .panel-heading{
           .panel-title{
@@ -306,7 +307,7 @@
     }
   }
   @media (min-width: $desktop) {
-    .accordion{
+    .episodicAccordion{
       .panel-group{
         .panel-heading{
           .panel-title{
@@ -318,7 +319,7 @@
                     &.heading{
                       padding: 1% 11%;
                       font-size: 26px;
-                      width: 53%;
+                      width: 51%;
                     }
                     &.days{
                       font-size: 26px;
@@ -348,50 +349,146 @@
         }
         .panel-collapse{
           .text{
+            .textnote{
+              padding: 0 165px 50px 70px;
+              font-size: 18px;
+              color: $heading-color;
+            }
             .cmpText {
-              padding: 0 12.5% 0 7.5%;
+              margin: 0 109px 0 45px;
+              border-top: 1px solid $heading-border;
+              padding: 50px 25px 50px 45px;
               p {
                 font-size: 14px;
-                &.textnote{
-                  font-size: 14px;
-                  .show_hide{
-                    text-decoration: none;
-                    &:hover{
-                      text-decoration: none;
-                    }
-                    &:active{
-                      text-decoration: none;
-                    }
-                    &:focus{
-                      text-decoration: none;
-                    }
-                  }
-                  span{
-                    display:inline;
-                  }
-                }
+                
                 &.textHeading{
-                  font-size: 18px;
+                  font-size: 23px;
+                  color: $color-link;
+                  margin: 0;
+                  a {
+                    span{
+                      color: $primary-grey-dark;
+                      font-size: 21px;
+
+                      &.cmpAccordionIcon {
+                        float: left;
+                        width: 4%;
+                        padding: 0% 3% 0 0;
+                        display: inline-block;
+                        color: $primary-blue-light;
+                        text-align: left;
+            
+                        &:before {
+                          //content: '\f106';
+                          content: '\f054';
+                          font-size: 25px;
+                        }
+                      }
+                    }
+                  }
                 }
-                &.textContent{
-                  font-size: 14px;
-                  .show_hide{
+                
+              }
+              div.textContent{
+                font-size: 14px;
+
+                .texthead{
+                  padding: 0 25px 50px 25px;
+                }
+                .tablecontent{
+                  table{
+                    width: 102%;
+                    tbody{
+                      tr{
+                        border-bottom: 1px solid $heading-border;
+                        th{
+                          background: $color-heading;
+                          color:$color-background;
+                          width: 27%;
+                          font-size: 12px;
+                          font-weight: normal;
+                          
+                          &:first-child{
+                            width: 30%;
+                            padding: 10px 0 10px 25px;
+                            border-radius: 5px 0 0 0;
+                          }
+                          &:nth-child(2){
+                            width:20%;
+                          }
+                          &:nth-child(3){
+                            width: 30%;
+                            text-align: center;
+                          }
+                          
+                          &:last-child{
+                            padding: 10px 25px 10px 0;
+                            border-radius: 0 5px 0 0;
+                            text-align: right;
+                          }
+                        }
+                        td{
+                          padding: 30px 25px;
+                          background-color:$table-td-bg;
+                          font-size: 18px;
+                          color:$color-heading;
+                          &:last-child{
+                            font-size: 21px;
+                            text-align: right;
+                          }
+                          span{
+                            &:last-child{
+                              font-size: 14px;
+                              font-style: italic;
+                              color: $primary-grey-mid;
+                              display: block;
+                            }
+                          }
+                        }
+                        &:last-child{
+                          border-bottom: none;
+                          td{
+                            background-color:$table-bg;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .show_hide{
+                  text-decoration: none;
+                  &:hover{
                     text-decoration: none;
-                    &:hover{
-                      text-decoration: none;
-                    }
-                    &:active{
-                      text-decoration: none;
-                    }
-                    &:focus{
-                      text-decoration: none;
-                    }
                   }
-                  span{
-                    display:inline;
+                  &:active{
+                    text-decoration: none;
                   }
+                  &:focus{
+                    text-decoration: none;
+                  }
+                }
+                span{
+                  display:inline;
                 }
               }
+            }
+          }
+          .cmpAvg{
+            padding: 50px 85px;
+            background: $color-heading;
+            color: $color-background;
+            .textHeading{
+              color: $color-background;
+              font-size: 23px;
+              padding: 0 50px 0 0;
+              span{
+                float: right;
+                font-size: 23px;
+              }
+            }
+            .note{
+              font-size: 14px;
+              color: $color-background;
             }
           }
         }
@@ -399,7 +496,7 @@
     }
   }
   @media (min-width: $wide-desktop) {
-    .accordion{
+    .episodicAccordion{
       .panel-group{
         .panel-heading{
           .panel-title{
@@ -440,60 +537,133 @@
         }
         .panel-collapse{
           .text{
+            .textnote{
+              padding: 0 165px 50px 70px;
+              font-size: 18px;
+              color: $heading-color;
+            }
             .cmpText {
-              padding: 0 12.5% 0 7.5%;
+              margin: 0 109px 0 45px;
+              border-top: 1px solid $heading-border;
+              padding: 50px 25px 50px 45px;
               p {
-                font-size: 20px;
-                &.textnote{
-                  font-size: 20px;
-                  .show_hide{
-                    text-decoration: none;
-                    &:hover{
-                      text-decoration: none;
-                    }
-                    &:active{
-                      text-decoration: none;
-                    }
-                    &:focus{
-                      text-decoration: none;
-                    }
-                  }
-                  span{
-                    display:inline;
-                  }
-                }
+                font-size: 14px;
+                
                 &.textHeading{
-                  font-size: 24px;
+                  font-size: 23px;
+                  color: $color-link;
+                  margin: 0;
+                  a {
+                    span{
+                      color: $primary-grey-dark;
+                      font-size: 21px;
+
+                      &.cmpAccordionIcon {
+                        float: left;
+                        width: 4%;
+                        padding: 0% 3% 0 0;
+                        display: inline-block;
+                        color: $primary-blue-light;
+                        text-align: left;
+            
+                        &:before {
+                          content: '\f106';
+                          font-size: 25px;
+                        }
+                      }
+                    }
+                  }
                 }
-                &.textContent{
-                  font-size: 20px;
-                  .show_hide{
+                
+              }
+              div.textContent{
+                font-size: 14px;
+
+                .texthead{
+                  padding: 0 25px 50px 25px;
+                }
+                .tablecontent{
+                  table{
+                    width: 102%;
+                    tbody{
+                      tr{
+                        border-bottom: 1px solid $heading-border;
+                        th{
+                          background: $color-heading;
+                          color:$color-background;
+                          width: 27%;
+                          font-size: 12px;
+                          font-weight: normal;
+                          
+                          &:first-child{
+                            width: 30%;
+                            padding: 10px 0 10px 25px;
+                            border-radius: 5px 0 0 0;
+                          }
+
+                          &:last-child{
+                            padding: 10px 25px 10px 0;
+                            border-radius: 0 5px 0 0;
+                            text-align: right;
+                          }
+                        }
+                        td{
+                          padding: 30px 25px;
+                          background-color:$table-td-bg;
+                          font-size: 18px;
+                          color:$color-heading;
+                          &:last-child{
+                            font-size: 21px;
+                            text-align: right;
+                          }
+                        }
+                        &:last-child{
+                          border-bottom: none;
+                          td{
+                            background-color:$table-bg;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .show_hide{
+                  text-decoration: none;
+                  &:hover{
                     text-decoration: none;
-                    &:hover{
-                      text-decoration: none;
-                    }
-                    &:active{
-                      text-decoration: none;
-                    }
-                    &:focus{
-                      text-decoration: none;
-                    }
                   }
-                  span{
-                    display:inline;
+                  &:active{
+                    text-decoration: none;
                   }
+                  &:focus{
+                    text-decoration: none;
+                  }
+                }
+                span{
+                  display:inline;
                 }
               }
+            }
+          }
+          .cmpAvg{
+            padding: 50px 85px;
+            background: $color-heading;
+            color: $color-background;
+            .textHeading{
+              color: $color-background;
+              font-size: 23px;
+              padding: 0 50px 0 0;
+              span{
+                float: right;
+                font-size: 23px;
+              }
+            }
+            .note{
+              font-size: 14px;
+              color: $color-background;
             }
           }
         }
       }
     }
   }
-
-
-
-
-
-
-
