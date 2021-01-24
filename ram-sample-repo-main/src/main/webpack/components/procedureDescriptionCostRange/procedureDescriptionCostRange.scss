@@ -125,3 +125,9 @@
     padding-left: 0;
   }
 }
+
+@media (-ms-high-contrast: none) {
+  .cmp-informationBox .cmp-informationBox_icon{
+    width: 110px;
+  }
+}

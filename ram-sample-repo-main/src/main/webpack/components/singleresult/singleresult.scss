@@ -24,6 +24,10 @@
     .cmp-singleresult_heading {
       max-width: $container-max-width;
       width: 100%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -35,6 +39,10 @@
     }
 
     .cmp-singleresult_block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -145,5 +153,21 @@
         }
       }
     }
+  }
+}
+
+@media (-ms-high-contrast: none) {
+  .cmp-singleresult {
+    .cmp-singleresult_overlay{
+      height: 150%;
+    }
+  }
+
+  .cmp-singleresult_block{
+    margin-top: 9%;
+  }
+
+  .cmp-singleresult_content{
+    margin-left: 13%;
   }
 }
