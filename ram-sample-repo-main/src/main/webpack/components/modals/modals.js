@@ -1,5 +1,4 @@
 class Modals {
-
     constructor(componentClassName) {
         this.component = document.querySelector(componentClassName);
         if (this.component !== null) {
