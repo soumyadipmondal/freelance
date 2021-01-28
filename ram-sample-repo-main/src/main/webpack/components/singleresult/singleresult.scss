@@ -158,9 +158,7 @@
 
 @media (-ms-high-contrast: none) {
   .cmp-singleresult {
-    .cmp-singleresult_overlay{
-      height: 100vh;
-    }
+    height: 426px;
   }
   .cmp-singleresult_block{
     margin-top: 112px;
@@ -168,10 +166,11 @@
 
   @media (min-width: $tablet+1) {
     .cmp-singleresult_block{
-      margin-top: 120px;
+      margin-top: 110px;
     }
     .cmp-singleresult_content{
-      margin-left: 150px;
+      z-index: 1;
+      margin-left: 76px;
     }
   }
 }
