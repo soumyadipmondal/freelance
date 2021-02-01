@@ -1,0 +1,1460 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>cmp-compareProviders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body class="page basicpage">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                <div class="providerresultcountbar aem-GridColumn aem-GridColumn--default--12">
+
+                    <!-- Component HTML Goes here -->
+                    <section class="cmp-providerresultcountbar" style="background-color: #064c7b;">
+                        <div class="cmp-providerresultcountbar_block">
+                            <p class="cmp-providerresultcountbar__text" style="color: #ffffff;">15 In-Network
+                                Providers</p>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="notification aem-GridColumn aem-GridColumn--default--12">
+
+                    <!-- Component HTML Goes here -->
+                    <section class="cmp-notification osc">
+                        <div class="cmp-notification_block">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            <div class="cmp-text__paragraph">
+                                <p>
+                                    OSC Level 1 - Your results have been filtered to show providers that belong
+                                    to your Organized System of Care (OSC). <a href="#">Don't want to see the
+                                        best choices? Show all.</a>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="providerResultList aem-GridColumn aem-GridColumn--default--12">
+
+                    <!-- Component HTML Goes here -->
+                    <section class="cmp-providerResultList">
+                        <div class="cmp-providerResultList_filter-container">
+                            <div class="cmp-providerResultList_sort-location-block">
+                                <button class="cmp-providerResultList_sort-block" data-toggle="modal"
+                                    data-target=".sort-container" type="button">
+                                    <div class="sort-selected">
+                                        <i class="fas fa-sort" aria-hidden="true"></i>
+                                        <div>
+                                            <span class="label">Sort By</span>
+                                            <span class="sort">Cost (Low to High)</span>
+                                        </div>
+                                        <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    </div>
+                                    <ul class="sort-list" role="listbox" tabindex="0">
+                                        <li class="sort-item selected" tabindex="-1" role="option" aria-selected="true">
+                                            <span>Cost (Low to High)</span>
+                                            <i class="fal fa-check" aria-hidden="true"></i>
+                                        </li>
+                                        <li class="sort-item" tabindex="-1" role="option" aria-selected="false">
+                                            <span>Cost (High to Low)</span>
+                                        </li>
+                                        <li class="sort-item" tabindex="-1" role="option" aria-selected="false">
+                                            <span>Distance (Closest)</span>
+                                        </li>
+                                        <li class="sort-item" tabindex="-1" role="option" aria-selected="false">
+                                            <span>Reviews (Highest First)</span>
+                                        </li>
+                                    </ul>
+                                </button>
+                                <button class="cmp-providerResultList_location-block" data-toggle="modal"
+                                    data-target=".location-container" type="button">
+                                    <div class="location-selected">
+                                        <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                        <div>
+                                            <span class="label">Near</span>
+                                            <span class="location">441071 Kensington, Clinton Twp, MI
+                                                48038</span>
+                                        </div>
+                                        <i class="fas fa-caret-right" aria-hidden="true"></i>
+                                    </div>
+                                </button>
+                            </div>
+                            <button class="cmp-providerResultList_filter-block" data-toggle="modal"
+                                data-target=".filter-container" type="button">
+                                <div class="filters-selected">
+                                    <i class="fas fa-filter" aria-hidden="true"></i>
+                                    <div class="label">
+                                        Filter
+                                    </div>
+                                    <div class="filter-count"></div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="modal fade sort-container" tabindex="-1" role="dialog"
+                            aria-labelledby="sortContainer" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="sort-selected">
+                                            <i class="fas fa-sort" aria-hidden="true"></i>
+                                            <span class="label">Sort By</span>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="sort-list">
+                                            <li class="sort-item selected">
+                                                <span>Cost (Low to High)</span>
+                                                <i class="fal fa-check" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="sort-item">
+                                                <span>Cost (High to Low)</span>
+                                            </li>
+                                            <li class="sort-item">
+                                                <span>Distance (Closest)</span>
+                                            </li>
+                                            <li class="sort-item">
+                                                <span>Reviews (Highest First)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade location-container" tabindex="-1" role="dialog"
+                            aria-labelledby="locationContainer" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="update-location">
+                                            <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                            <div class="label">
+                                                Update Location
+                                            </div>
+                                        </div>
+                                        <div class="update-block">
+                                            <div class="cancel-location">
+                                                <button class="label" type="button" data-dismiss="modal">
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                            <button class="update-done" data-dismiss="modal">Update</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="location-search col-sm-12 col-md-8">
+                                                <label>Enter an address, city or zip code</label>
+                                                <div class="location-search_block">
+                                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                                    <input id="autocomplete" class="location-search_input" type="text"
+                                                        name="location" aria-label="Location Search"
+                                                        placeholder="Enter an address, city or zip code"
+                                                        aria-autocomplete="list" autocomplete="off"
+                                                        onfocus="this.placeholder = ''"
+                                                        onblur="this.placeholder = 'Enter an address, city or zip code'"
+                                                        data-toggle="modal" data-target=".location-search-modal" />
+                                                    <div class="location-search_typeahead-result-block">
+                                                        <div class="location-search_typeahead-no-result-text">
+                                                            No results for entered address
+                                                        </div>
+                                                        <div class="home-location-result-content" tabindex="0">
+                                                            <i class="fas fa-home" aria-hidden="true"></i>
+                                                            Use my home address
+                                                        </div>
+                                                    </div>
+                                                    <button class="location-search_clear"
+                                                        aria-label="Clear your location search text">
+                                                        <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="location-image col-sm-12 col-md-4">
+                                                <img src="./static/images/Update_Location_Image.png"
+                                                    alt="Location Image" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal location-search-modal" tabindex="-1" role="dialog"
+                            aria-labelledby="locationSearchModal" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="location-search_field-block">
+                                            <button type="button" class="location-search_input-back" aria-label="back"
+                                                data-dismiss="modal">
+                                                <i class="fal fa-arrow-left" aria-hidden="true"></i>
+                                            </button>
+                                            <input id="autocomplete-modal" class="location-search_input-modal"
+                                                type="text" name="location" aria-label="Location Search"
+                                                placeholder="Enter an address, city or zip code"
+                                                aria-autocomplete="list" autocomplete="off"
+                                                onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Enter an address, city or zip code'" />
+                                            <button type="button" class="location-search_clear"
+                                                aria-label="Clear your search text">
+                                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="location-search_typeahead-result-block">
+                                            <div class="location-search_typeahead-no-result-text">
+                                                No results for entered address
+                                            </div>
+                                            <span class="home-location-result-content">
+                                                <i class="fas fa-home" aria-hidden="true"></i>
+                                                Use my home address
+                                            </span>
+                                        </div>
+                                        <div class="location-search_typeahead-default-block">
+                                            <i class="fal fa-map-marker-alt" aria-hidden="true"></i>
+                                            Enter an address, city or zip code
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade filter-container" tabindex="-1" role="dialog"
+                            aria-labelledby="filterContainer" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="all-filters">
+                                            <i class="fas fa-filter" aria-hidden="true"></i>
+                                            <div class="label">
+                                                All Filters
+                                            </div>
+                                        </div>
+                                        <div class="update-block">
+                                            <div class="clear-filter">
+                                                <button class="label" type="button">
+                                                    Clear
+                                                </button>
+                                                <div class="filter-count"></div>
+                                            </div>
+                                            <button class="update-filter" type="button"
+                                                data-dismiss="modal">Done</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="all-filters-items">
+                                            <div class="row">
+                                                <div class="all-filters-item col-sm-12 col-md-4">
+                                                    <div class="accordion-header">
+                                                        <button class="btn btn-link" data-toggle="collapse"
+                                                            data-target="#collapseDistance" aria-expanded="true"
+                                                            aria-controls="collapseDistance">
+                                                            <span class="accordion-title">Distance</span>
+                                                            <span class="accordion-icon fal"></span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div id="collapseDistance" class="panel collapse show"
+                                                        aria-labelledby="distance">
+                                                        <div class="accordion-body">
+                                                            <div role="radiogroup">
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input"
+                                                                        id="fiveMiles" name="distance" value="5">
+                                                                    <label class="custom-control-label fal"
+                                                                        for="fiveMiles">
+                                                                        <span>5 mi</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input"
+                                                                        id="tenMiles" name="distance" value="10">
+                                                                    <label class="custom-control-label fal"
+                                                                        for="tenMiles">
+                                                                        <span>10 mi</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input"
+                                                                        id="fifteenMiles" name="distance" value="15">
+                                                                    <label class="custom-control-label fal"
+                                                                        for="fifteenMiles">
+                                                                        <span>15 mi</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input"
+                                                                        id="twentyFiveMiles" name="distance" value="25"
+                                                                        checked>
+                                                                    <label class="custom-control-label fal"
+                                                                        for="twentyFiveMiles">
+                                                                        <span>25 mi</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input"
+                                                                        id="fiftyMiles" name="distance" value="50">
+                                                                    <label class="custom-control-label fal"
+                                                                        for="fiftyMiles">
+                                                                        <span>50 mi</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" class="custom-control-input"
+                                                                        id="oneFiftyMiles" name="distance" value="150">
+                                                                    <label class="custom-control-label fal"
+                                                                        for="oneFiftyMiles">
+                                                                        <span>150 mi</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="all-filters-item col-sm-12 col-md-4">
+                                                    <div class="accordion-header">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseProviderType" aria-expanded="true"
+                                                            aria-controls="collapseProviderType">
+                                                            <span class="accordion-title">Provider Type</span>
+                                                            <span class="accordion-icon fal"></span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div id="collapseProviderType" class="panel collapse"
+                                                        aria-labelledby="providerType">
+                                                        <div class="accordion-body" role="group">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="doctors" name="providerType">
+                                                                <label class="custom-control-label fal" for="doctors">
+                                                                    <span>Doctors</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="facilities" name="providerType">
+                                                                <label class="custom-control-label fal"
+                                                                    for="facilities">
+                                                                    <span>Facilities</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="all-filters-item col-sm-12 col-md-4">
+                                                    <div class="accordion-header">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseBlueDistinctionCenters"
+                                                            aria-expanded="true"
+                                                            aria-controls="collapseBlueDistinctionCenters">
+                                                            <span class="accordion-title">Blue Distinction
+                                                                Centers</span>
+                                                            <span class="accordion-icon fal"></span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div id="collapseBlueDistinctionCenters" class="panel collapse"
+                                                        aria-labelledby="blueDistinctionCenters">
+                                                        <div class="accordion-body" role="group">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="bdc" name="blueDistinctionCenters">
+                                                                <label class="custom-control-label fal" for="bdc">
+                                                                    <img src="./static/images/Blue_Distinction_Center_2x.png"
+                                                                        alt="Blue Distinction Center Icon" />
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="bdcPlus" name="blueDistinctionCenters">
+                                                                <label class="custom-control-label fal" for="bdcPlus">
+                                                                    <img src="./static/images/Blue_Distinction_Center_Plus_2x.png"
+                                                                        alt="Blue Distinction Center + Icon" />
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="all-filters-item col-sm-12 col-md-4">
+                                                    <div class="accordion-header">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseOSC" aria-expanded="true"
+                                                            aria-controls="collapseOSC">
+                                                            <span class="accordion-title">Organized System(s) of
+                                                                Care</span>
+                                                            <span class="accordion-icon fal"></span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div id="collapseOSC" class="panel collapse" aria-labelledby="OSC">
+                                                        <div class="accordion-body" role="group">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="OSCLevelOne" name="OSC">
+                                                                <label class="custom-control-label fal"
+                                                                    for="OSCLevelOne">
+                                                                    <i class="fas fa-signal-alt" aria-hidden="true"></i>
+                                                                    <span>Level 1 OSC</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="OSCLevelTwo" name="OSC">
+                                                                <label class="custom-control-label fal"
+                                                                    for="OSCLevelTwo">
+                                                                    <i class="fas fa-signal-alt-3"
+                                                                        aria-hidden="true"></i>
+                                                                    <span>Level 2 OSC</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cmp-providerResultList_items">
+                            <div class="cmp-providerResultList_item">
+                                <div class="cmp-providerResultList_icon-container">
+                                    <div class="cmp-providerResultList_icon">
+                                        <img src="./static/images/Provider_Facility_Icon_v3_2x.png"
+                                            alt="Facility Icon" />
+                                    </div>
+                                    <div class="cmp-providerResultList_compare custom-control">
+                                        <input type="checkbox" class="custom-control-input" id="compare1"
+                                            name="compareProvider">
+                                        <label class="custom-control-label fal" for="compare1">
+                                            <span>Compare</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="cmp-providerResultList_provider-container">
+                                    <div class="cmp-providerResultList_provider-cost">
+                                        <div class="cmp-providerResultList_provider-block">
+                                            <div class="cmp-providerResultList_provider-icon-heading">
+                                                <img class="cmp-providerResultList_provider-icon"
+                                                    src="./static/images/Provider_Facility_Icon_v3_2x.png"
+                                                    alt="Facility Icon" />
+                                                <h4 class="cmp-providerResultList_provider-heading">
+                                                    BEAUMONT HOSPITAL - TROY
+                                                </h4>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-address">
+                                                murray hospital,44201 Dequindre Rd ,Troy
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-misc">
+                                                <div class="cmp-providerResultList_provider-phone">
+                                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                    <a href="tel:(248) 964-5000">(248) 964-5000</a>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-distance">
+                                                    <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                                    3.1 mi
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-rating">
+                                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                                    1.5
+                                                </div>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-multicare">
+                                                <div class="cmp-providerResultList_provider-care">
+                                                    <i class="fas fa-signal-alt" aria-hidden="true"></i>
+                                                    <button class="tooltip-care" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        Michcare (+1 more OSC)
+                                                    </button>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-choice osc-1">
+                                                    Best Choice
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-providerResultList_cost-block">
+                                            <div class="cmp-providerResultList_cost-headline">
+                                                Your out-of-pocket cost
+                                            </div>
+                                            <h4 class="cmp-providerResultList_cost-procedure">
+                                                <a href="#">
+                                                    $1,312
+                                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                            </h4>
+                                            <div class="cmp-providerResultList_cost-total">
+                                                Treatment $34,851
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-providerResultList_provider-estimate-special">
+                                        <a class="cmp-providerResultList_provider-estimate" type="button"
+                                            href="#">Estimated Cost
+                                        </a>
+                                        <div class="cmp-providerResultList_provider-specials">
+                                            <img class="cmp-providerResultList_provider-specials-icon"
+                                                src="./static/images/Blue_Distinction_Center_2x.png"
+                                                alt="Blue Distinction Center Icon" />
+                                            <img class="cmp-providerResultList_provider-specials-icon"
+                                                src="./static/images/Blue_Distinction_Center_Plus_2x.png"
+                                                alt="Blue Distinction Center + Icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmp-providerResultList_item">
+                                <div class="cmp-providerResultList_icon-container">
+                                    <div class="cmp-providerResultList_icon">
+                                        <img src="./static/images/Provider_Doctors_Icon_v1_2x.png" alt="Doctors Icon" />
+                                    </div>
+                                    <div class="cmp-providerResultList_compare custom-control">
+                                        <input type="checkbox" class="custom-control-input" id="compare2"
+                                            name="compareProvider">
+                                        <label class="custom-control-label fal" for="compare2">
+                                            <span>Compare</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="cmp-providerResultList_provider-container">
+                                    <div class="cmp-providerResultList_provider-cost">
+                                        <div class="cmp-providerResultList_provider-block">
+                                            <div class="cmp-providerResultList_provider-icon-heading">
+                                                <img class="cmp-providerResultList_provider-icon"
+                                                    src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                    alt="Doctors Icon" />
+                                                <h4 class="cmp-providerResultList_provider-heading">
+                                                    Yaldo, Maria K
+                                                </h4>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-address">
+                                                murray hospital,36700 WOODWARD AVE STE 203,Bloomfld Hls
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-misc">
+                                                <div class="cmp-providerResultList_provider-phone">
+                                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                    <a href="tel:(248) 305-8400">(248) 305-8400</a>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-distance">
+                                                    <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                                    4.8 mi
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-rating">
+                                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                                    5
+                                                </div>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-multicare">
+                                                <div class="cmp-providerResultList_provider-care">
+                                                    <i class="fas fa-signal-alt-3" aria-hidden="true"></i>
+                                                    <button class="tooltip-care" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        Unicare (+1 more OSC)
+                                                    </button>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-choice osc-2">
+                                                    <button class="tooltip-choice" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        <i class="fas fa-exclamation-triangle"
+                                                            aria-hidden="true"></i>Not a Level 1 OSC
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-providerResultList_cost-block">
+                                            <div class="cmp-providerResultList_cost-headline">
+                                                Your out-of-pocket cost
+                                            </div>
+                                            <h4 class="cmp-providerResultList_cost-procedure">
+                                                <a href="#">
+                                                    $1,312
+                                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                            </h4>
+                                            <div class="cmp-providerResultList_cost-total">
+                                                Treatment $34,851
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-providerResultList_provider-estimate-special">
+                                        <a class="cmp-providerResultList_provider-estimate" type="button"
+                                            href="#">Estimated Cost
+                                        </a>
+                                        <div class="cmp-providerResultList_provider-specials">
+                                            <img class="cmp-providerResultList_provider-specials-icon"
+                                                src="./static/images/Blue_Distinction_Center_2x.png"
+                                                alt="Blue Distinction Center Icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmp-providerResultList_item">
+                                <div class="cmp-providerResultList_icon-container">
+                                    <div class="cmp-providerResultList_icon">
+                                        <img src="./static/images/Provider_Facility_Icon_v3_2x.png"
+                                            alt="Facility Icon" />
+                                    </div>
+                                    <div class="cmp-providerResultList_compare custom-control">
+                                        <input type="checkbox" class="custom-control-input" id="compare3"
+                                            name="compareProvider">
+                                        <label class="custom-control-label fal" for="compare3">
+                                            <span>Compare</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="cmp-providerResultList_provider-container">
+                                    <div class="cmp-providerResultList_provider-cost">
+                                        <div class="cmp-providerResultList_provider-block">
+                                            <div class="cmp-providerResultList_provider-icon-heading">
+                                                <img class="cmp-providerResultList_provider-icon"
+                                                    src="./static/images/Provider_Facility_Icon_v3_2x.png"
+                                                    alt="Facility Icon" />
+                                                <h4 class="cmp-providerResultList_provider-heading">
+                                                    BEAUMONT HOSPITAL - TROY
+                                                </h4>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-address">
+                                                murray hospital,44201 Dequindre Rd ,Troy
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-misc">
+                                                <div class="cmp-providerResultList_provider-phone">
+                                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                    <a href="tel:(248) 964-5000">(248) 964-5000</a>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-distance">
+                                                    <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                                    3.1 mi
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-rating">
+                                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                                    1.5
+                                                </div>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-multicare">
+                                                <div class="cmp-providerResultList_provider-care">
+                                                    <i class="fas fa-signal-alt" aria-hidden="true"></i>
+                                                    <button class="tooltip-care" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        Michcare (+1 more OSC)
+                                                    </button>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-choice osc-1">
+                                                    Best Choice
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-providerResultList_cost-block">
+                                            <div class="cmp-providerResultList_cost-headline">
+                                                Your out-of-pocket cost
+                                            </div>
+                                            <h4 class="cmp-providerResultList_cost-procedure">
+                                                <a href="#">
+                                                    $1,312
+                                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                            </h4>
+                                            <div class="cmp-providerResultList_cost-total">
+                                                Treatment $34,851
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-providerResultList_provider-estimate-special">
+                                        <a class="cmp-providerResultList_provider-estimate" type="button"
+                                            href="#">Estimated Cost
+                                        </a>
+                                        <div class="cmp-providerResultList_provider-specials">
+                                            <img class="cmp-providerResultList_provider-specials-icon"
+                                                src="./static/images/Blue_Distinction_Center_2x.png"
+                                                alt="Blue Distinction Center Icon" />
+                                            <img class="cmp-providerResultList_provider-specials-icon"
+                                                src="./static/images/Blue_Distinction_Center_Plus_2x.png"
+                                                alt="Blue Distinction Center + Icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmp-providerResultList_item">
+                                <div class="cmp-providerResultList_icon-container">
+                                    <div class="cmp-providerResultList_icon">
+                                        <img src="./static/images/Provider_Doctors_Icon_v1_2x.png" alt="Doctors Icon" />
+                                    </div>
+                                    <div class="cmp-providerResultList_compare custom-control">
+                                        <input type="checkbox" class="custom-control-input" id="compare4"
+                                            name="compareProvider">
+                                        <label class="custom-control-label fal" for="compare4">
+                                            <span>Compare</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="cmp-providerResultList_provider-container">
+                                    <div class="cmp-providerResultList_provider-cost">
+                                        <div class="cmp-providerResultList_provider-block">
+                                            <div class="cmp-providerResultList_provider-icon-heading">
+                                                <img class="cmp-providerResultList_provider-icon"
+                                                    src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                    alt="Doctors Icon" />
+                                                <h4 class="cmp-providerResultList_provider-heading">
+                                                    Yaldo, Maria K
+                                                </h4>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-address">
+                                                murray hospital,36700 WOODWARD AVE STE 203,Bloomfld Hls
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-misc">
+                                                <div class="cmp-providerResultList_provider-phone">
+                                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                    <a href="tel:(248) 305-8400">(248) 305-8400</a>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-distance">
+                                                    <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                                    4.8 mi
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-rating">
+                                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                                    5
+                                                </div>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-multicare">
+                                                <div class="cmp-providerResultList_provider-care">
+                                                    <i class="fas fa-signal-alt-3" aria-hidden="true"></i>
+                                                    <button class="tooltip-care" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        Unicare (+1 more OSC)
+                                                    </button>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-choice osc-2">
+                                                    <button class="tooltip-choice" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        <i class="fas fa-exclamation-triangle"
+                                                            aria-hidden="true"></i>Not a Level 1 OSC
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-providerResultList_cost-block">
+                                            <div class="cmp-providerResultList_cost-headline">
+                                                Your out-of-pocket cost
+                                            </div>
+                                            <h4 class="cmp-providerResultList_cost-procedure">
+                                                <a href="#">
+                                                    $1,312
+                                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                            </h4>
+                                            <div class="cmp-providerResultList_cost-total">
+                                                Treatment $34,851
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-providerResultList_provider-estimate-special">
+                                        <a class="cmp-providerResultList_provider-estimate" type="button"
+                                            href="#">Estimated Cost
+                                        </a>
+                                        <div class="cmp-providerResultList_provider-specials">
+                                            <img class="cmp-providerResultList_provider-specials-icon"
+                                                src="./static/images/Blue_Distinction_Center_2x.png"
+                                                alt="Blue Distinction Center Icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmp-providerResultList_item">
+                                <div class="cmp-providerResultList_icon-container">
+                                    <div class="cmp-providerResultList_icon">
+                                        <img src="./static/images/Provider_Doctors_Icon_v1_2x.png" alt="Doctors Icon" />
+                                    </div>
+                                    <div class="cmp-providerResultList_compare custom-control">
+                                        <input type="checkbox" class="custom-control-input" id="compare5"
+                                            name="compareProvider">
+                                        <label class="custom-control-label fal" for="compare5">
+                                            <span>Compare</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="cmp-providerResultList_provider-container">
+                                    <div class="cmp-providerResultList_provider-cost">
+                                        <div class="cmp-providerResultList_provider-block">
+                                            <div class="cmp-providerResultList_provider-icon-heading">
+                                                <img class="cmp-providerResultList_provider-icon"
+                                                    src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                    alt="Doctors Icon" />
+                                                <h4 class="cmp-providerResultList_provider-heading">
+                                                    Yaldo, Maria K
+                                                </h4>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-address">
+                                                murray hospital,36700 WOODWARD AVE STE 203,Bloomfld Hls
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-misc">
+                                                <div class="cmp-providerResultList_provider-phone">
+                                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                    <a href="tel:(248) 305-8400">(248) 305-8400</a>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-distance">
+                                                    <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                                    4.8 mi
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-rating">
+                                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                                    5
+                                                </div>
+                                            </div>
+                                            <div class="cmp-providerResultList_provider-multicare">
+                                                <div class="cmp-providerResultList_provider-care">
+                                                    <i class="fas fa-signal-alt-3" aria-hidden="true"></i>
+                                                    <button class="tooltip-care" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        Unicare (+1 more OSC)
+                                                    </button>
+                                                </div>
+                                                <div class="cmp-providerResultList_provider-choice osc-2">
+                                                    <button class="tooltip-choice" data-toggle="popover"
+                                                        data-placement="bottom" data-trigger="focus">
+                                                        <i class="fas fa-exclamation-triangle"
+                                                            aria-hidden="true"></i>Not a Level 1 OSC
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-providerResultList_cost-block">
+                                            <div class="cmp-providerResultList_cost-headline">
+                                                Your out-of-pocket cost
+                                            </div>
+                                            <h4 class="cmp-providerResultList_cost-procedure">
+                                                <a href="#">
+                                                    $1,312
+                                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                            </h4>
+                                            <div class="cmp-providerResultList_cost-total">
+                                                Treatment $34,851
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-providerResultList_provider-estimate-special">
+                                        <a class="cmp-providerResultList_provider-estimate" type="button"
+                                            href="#">Estimated Cost
+                                        </a>
+                                        <div class="cmp-providerResultList_provider-specials">
+                                            <img class="cmp-providerResultList_provider-specials-icon"
+                                                src="./static/images/Blue_Distinction_Center_2x.png"
+                                                alt="Blue Distinction Center Icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav aria-label="...">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <div class="page-link" tabindex="-1">Prev</div>
+                                </li>
+                                <li class="page-item">
+                                    <div class="page-link" tabindex="0">1</div>
+                                </li>
+                                <li class="page-item ellipsis">...</li>
+                                <li class="page-item active">
+                                    <div class="page-link" tabindex="0">3<span class="sr-only">(current)</span>
+                                    </div>
+                                </li>
+                                <li class="page-item ellipsis">...</li>
+                                <li class="page-item">
+                                    <div class="page-link" tabindex="0">10</div>
+                                </li>
+                                <li class="page-item">
+                                    <div class="page-link" tabindex="0">Next</div>
+                                </li>
+                            </ul>
+                            <div class="pagination_footer justify-content-center">1-8 of 15</div>
+                        </nav>
+                    </section>
+
+                    <script>
+                        let autocomplete, autocompleteModal;
+
+                        function initAutocomplete() {
+                            const input = document.getElementById('autocomplete'),
+                                inputModal = document.getElementById('autocomplete-modal');
+                            if (window.innerWidth >= 768) {
+                                autocomplete = new google.maps.places.Autocomplete(
+                                    input, {
+                                        types: ["geocode"]
+                                    }
+                                );
+                                autocomplete.addListener('place_changed', placeChanged);
+                            } else {
+                                autocompleteModal = new google.maps.places.Autocomplete(
+                                    inputModal, {
+                                        types: ["geocode"]
+                                    }
+                                );
+                                autocompleteModal.addListener('place_changed', placeChanged);
+                            }
+                        }
+
+                        function placeChanged() {
+                            if (window.innerWidth >= 768) {
+                                $('.location-search_typeahead-no-result-text').hide();
+                                $('.location-search_block').removeClass('border-blue_grey-bottom');
+                                $('.location-search_typeahead-result-block').hide();
+                                $('.location-search_clear').hide();
+                            } else {
+                                $('.location-search-modal .location-search_typeahead-no-result-text').hide();
+                                $('.location-search_input').val($('.location-search_input-modal').val());
+                                $('.location-search-modal').modal('hide');
+                            }
+                        };
+                        $('.tooltip-care').popover({
+                            content: '<p>\n' +
+                                'This provider is a member of: <br>\n' +
+                                'Michcare: Level 1* <br>\n' +
+                                'United Physicians Integrated Care: Level 1 <br>\n' +
+                                '*Your PCP is also a member of this OSC.\n' +
+                                '</p>',
+                            html: true
+                        });
+                        // $('.tooltip-care').popover({
+                        //     content: '<p>\n' +
+                        //         'This provider is a member of: <br>\n' +
+                        //         'Unicare: Level 2 <br>\n' +
+                        //         'United Physicians Integrated Care: Level 2 <br>\n' +
+                        //         'Value Plus: Level 2' +
+                        //         '</p>',
+                        //     html: true
+                        // });
+                        $('.tooltip-choice').popover({
+                            content: '<p>\n' +
+                                'This provider is not in your Level 1 OSC. You will need a referral from your PCP to see this ' +
+                                'provider at the lowest cost.<br>\n' +
+                                '<p class="good-choice-block">\n' +
+                                '<span class="cob fas"></span>\n' +
+                                '<span class="good-choice">Good Choice (with referral)</span>\n' +
+                                '</p>',
+                            html: true
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="compareProviders">
+
+                <!-- Component HTML Goes here -->
+                <section class="cmp-compareProviders fixed-bottom">
+                    <div class="underlay"></div>
+                    <div class="compare-section">
+                        <div class="container-fluid compare-block">
+                            <div class="row">
+                                <div class="col selected">
+                                    <button type="button" class="close" aria-label="Close">
+                                        <i class="fal fa-times"></i>
+                                    </button>
+                                    <a href="http://www.google.com">
+                                        <div class="cmp-compareProviders_icon">
+                                            <img src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                alt="Doctors Icon" />
+                                        </div>
+                                        <div class="cmp-compareProviders_provider">
+                                            Minnock, Christopher, MD
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col selected">
+                                    <button type="button" class="close" aria-label="Close">
+                                        <i class="fal fa-times"></i>
+                                    </button>
+                                    <a href="http://www.google.com">
+                                        <div class="cmp-compareProviders_icon">
+                                            <img src="./static/images/Provider_Facility_Icon_v3_2x.png"
+                                                alt="Facility Icon" />
+                                        </div>
+                                        <div class="cmp-compareProviders_provider">
+                                            Beaumont Hospital - Troy
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col selected">
+                                    <button type="button" class="close" aria-label="Close">
+                                        <i class="fal fa-times"></i>
+                                    </button>
+                                    <a href="http://www.google.com">
+                                        <div class="cmp-compareProviders_icon">
+                                            <img src="./static/images/Provider_Facility_Icon_v3_2x.png"
+                                                alt="Facility Icon" />
+                                        </div>
+                                        <div class="cmp-compareProviders_provider">
+                                            Beaumont Hospital - Troy
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-2 compare-heading">
+                                    <div class="label">
+                                        Compare (<span class="compare-count">1</span>)
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 offset-lg-7 col-md-4 offset-md-6 col-sm-12 compare-btn-block">
+                                    <div class="clear-compare">
+                                        <button class="label" type="button">
+                                            Clear All
+                                        </button>
+                                    </div>
+                                    <button class="compare-all" type="button" data-toggle="modal"
+                                        data-target="#compareModal">Compare</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="compareModal" class="modal fade generic-modal" tabindex="-1" role="dialog" aria-hidden="false">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="modal-body_main">
+                                    <div class="modal-header">
+                                        <div class="modal-header_block">
+                                            <h2>Compare Providers</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i class="fal fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-compareProvider_main-info">
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="cmp-compareProvider_service-label">
+                                                Service
+                                            </div>
+                                            <div class="cmp-compareProvider_service-name">
+                                                ACL Reconstruction Surgery
+                                            </div>
+                                            <div class="cmp-compareProvider_service-name_mobile">
+                                                ACL Reconstruction Surgery for Jack
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="cmp-compareProvider_plan-label">
+                                                Plan Name
+                                            </div>
+                                            <div class="cmp-compareProvider_plan-name">
+                                                Blue Cross Preferred HMO Silver (Primary)
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="cmp-compareProvider_member-label">
+                                                Member
+                                            </div>
+                                            <div class="cmp-compareProvider_member-name">
+                                                Jack
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-body_block">
+                                    <div class="cmp-compareProvider_wrapper">
+                                        <div class="col-md-3 selected">
+                                            <div class="cmp-compareProvider_icon-heading">
+                                                <button type="button" class="close" aria-label="Close">
+                                                    <i class="fal fa-times"></i>
+                                                </button>
+                                                <div class="cmp-compareProvider_icon">
+                                                    <img src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                        alt="Doctors Icon" />
+                                                </div>
+                                                <h5 class="cmp-compareProvider_heading">
+                                                    BEAUMONT HOSPITAL - TROY
+                                                </h5>
+                                                <div class="cmp-compareProvider_address">
+                                                    murray hospital,44201 Dequindre Rd ,Troy
+                                                </div>
+                                            </div>
+                                            <div class="cmp-compareProvider_cost-block">
+                                                <div class="cmp-compareProvider_cost-headline">
+                                                    Your out-of-pocket cost
+                                                </div>
+                                                <h5 class="cmp-compareProvider_cost-procedure">
+                                                    <a href="#">
+                                                        $1,312
+                                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                    </a>
+                                                </h5>
+                                                <button class="cta cta-sm cta-green" type="button">
+                                                    Estimated Cost
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 selected">
+                                            <div class="cmp-compareProvider_icon-heading">
+                                                <button type="button" class="close" aria-label="Close">
+                                                    <i class="fal fa-times"></i>
+                                                </button>
+                                                <div class="cmp-compareProvider_icon">
+                                                    <img src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                        alt="Doctors Icon" />
+                                                </div>
+                                                <h5 class="cmp-compareProvider_heading">
+                                                    BEAUMONT HOSPITAL - TROY
+                                                </h5>
+                                                <div class="cmp-compareProvider_address">
+                                                    murray hospital,44201 Dequindre Rd ,Troy
+                                                </div>
+                                            </div>
+                                            <div class="cmp-compareProvider_cost-block">
+                                                <div class="cmp-compareProvider_cost-headline">
+                                                    Your out-of-pocket cost
+                                                </div>
+                                                <h5 class="cmp-compareProvider_cost-procedure">
+                                                    <a href="#">
+                                                        $1,312
+                                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                    </a>
+                                                </h5>
+                                                <button class="cta cta-sm cta-green" type="button">
+                                                    Estimated Cost
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 selected">
+                                            <div class="cmp-compareProvider_icon-heading">
+                                                <button type="button" class="close" aria-label="Close">
+                                                    <i class="fal fa-times"></i>
+                                                </button>
+                                                <div class="cmp-compareProvider_icon">
+                                                    <img src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                        alt="Doctors Icon" />
+                                                </div>
+                                                <h5 class="cmp-compareProvider_heading">
+                                                    BEAUMONT HOSPITAL - TROY
+                                                </h5>
+                                                <div class="cmp-compareProvider_address">
+                                                    murray hospital,44201 Dequindre Rd ,Troy
+                                                </div>
+                                            </div>
+                                            <div class="cmp-compareProvider_cost-block">
+                                                <div class="cmp-compareProvider_cost-headline">
+                                                    Your out-of-pocket cost
+                                                </div>
+                                                <h5 class="cmp-compareProvider_cost-procedure">
+                                                    <a href="#">
+                                                        $1,312
+                                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                    </a>
+                                                </h5>
+                                                <button class="cta cta-sm cta-green" type="button">
+                                                    Estimated Cost
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 selected">
+                                            <div class="cmp-compareProvider_icon-heading">
+                                                <button type="button" class="close" aria-label="Close">
+                                                    <i class="fal fa-times"></i>
+                                                </button>
+                                                <div class="cmp-compareProvider_icon">
+                                                    <img src="./static/images/Provider_Doctors_Icon_v1_2x.png"
+                                                        alt="Doctors Icon" />
+                                                </div>
+                                                <h5 class="cmp-compareProvider_heading">
+                                                    BEAUMONT HOSPITAL - TROY
+                                                </h5>
+                                                <div class="cmp-compareProvider_address">
+                                                    murray hospital,44201 Dequindre Rd ,Troy
+                                                </div>
+                                            </div>
+                                            <div class="cmp-compareProvider_cost-block">
+                                                <div class="cmp-compareProvider_cost-headline">
+                                                    Your out-of-pocket cost
+                                                </div>
+                                                <h5 class="cmp-compareProvider_cost-procedure">
+                                                    <a href="#">
+                                                        $1,312
+                                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                                    </a>
+                                                </h5>
+                                                <button class="cta cta-sm cta-green" type="button">
+                                                    Estimated Cost
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-compareProviders_info-wrapper">
+                                        <div>
+                                            <div class="accordion-header">
+                                                <button class="btn btn-link" data-toggle="collapse"
+                                                    data-target="#costForProcedure" aria-expanded="true"
+                                                    aria-controls="costForProcedure">
+                                                    <span class="accordion-title">Cost for Knee Repair ACL</span>
+                                                    <span class="accordion-icon fal"></span>
+                                                </button>
+                                            </div>
+                                            <div id="costForProcedure" class="panel show" aria-labelledby="">
+                                                <div class="accordion-body" role="group">
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Average Total Cost
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">$34,851</div>
+                                                            <div class="col-md-3 selected">$34,942</div>
+                                                            <div class="col-md-3 selected">$35,152</div>
+                                                            <div class="col-md-3 selected">$35,152</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Your Estimated Out-of-pocket Cost
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">$1,312</div>
+                                                            <div class="col-md-3 selected">$1,356</div>
+                                                            <div class="col-md-3 selected">$1,488</div>
+                                                            <div class="col-md-3 selected">$1,488</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="accordion-header">
+                                                <button class="btn btn-link" data-toggle="collapse"
+                                                    data-target="#quality" aria-expanded="true"
+                                                    aria-controls="costForProcedure">
+                                                    <span class="accordion-title">Quality</span>
+                                                    <span class="accordion-icon fal"></span>
+                                                </button>
+                                            </div>
+                                            <div id="quality" class="panel show" aria-labelledby="">
+                                                <div class="accordion-body" role="group">
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Distinction
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">---</div>
+                                                            <div class="col-md-3 selected">---</div>
+                                                            <div class="col-md-3 selected">
+                                                                <a href="#">Blue Distinction Center +</a><br>
+                                                                Bartiatric Surgery<br>
+                                                                Cardiac Center
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                <a href="#">Blue Distinction Center +</a><br>
+                                                                Bartiatric Surgery<br>
+                                                                Cardiac Center
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="accordion-header">
+                                                <button class="btn btn-link" data-toggle="collapse"
+                                                    data-target="#location" aria-expanded="true"
+                                                    aria-controls="costForProcedure">
+                                                    <span class="accordion-title">Address</span>
+                                                    <span class="accordion-icon fal"></span>
+                                                </button>
+                                            </div>
+                                            <div id="location" class="panel show" aria-labelledby="">
+                                                <div class="accordion-body" role="group">
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Address
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">
+                                                                14500 Hall Rd, Sterling Heights, MI 48313
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                44201 Dequindre Rd, Troy, MI 48085
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                3601 W 13 Mile Rd, Royal Oak, MI 48073
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                3601 W 13 Mile Rd, Royal Oak, MI 48073
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Distance to Location
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">2.6 miles</div>
+                                                            <div class="col-md-3 selected">7.4 miles</div>
+                                                            <div class="col-md-3 selected">13.7 miles</div>
+                                                            <div class="col-md-3 selected">13.7 miles</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                URL
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">
+                                                                <a href="http://www.henryford.com">Click Here</a>
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                <a href="http://www.beaumont.edu">Click Here</a>
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                <a href="http://www.beaumont.edu">Click Here</a>
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                <a href="http://www.beaumont.edu">Click Here</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Phone Number
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">
+                                                                (586) 247-6918
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                (248) 964-5000
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                (248) 898-5000
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                (248) 898-5000
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Patients seen here
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">
+                                                                Accepting new patients
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                Accepting new patients
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                Accepting new patients
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                Accepting new patients
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Language Spoken
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">
+                                                                English
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                English
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                English
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                English
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Speciality
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">
+                                                                Ambulatory Surgical Center
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                General Acute Care Hospital
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                General Acute Care Hospital
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                General Acute Care Hospital
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="accordion-info">
+                                                            <div>
+                                                                Area of Focus
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 selected">
+                                                                None
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                Mammography<br>
+                                                                Provides Speech Therapy
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                Mammography<br>
+                                                                Provides Speech Therapy
+                                                            </div>
+                                                            <div class="col-md-3 selected">
+                                                                Mammography<br>
+                                                                Provides Speech Therapy
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-body_footer">
+                                    <button class="cta cta-md cta-blue-dark" type="button" data-dismiss="modal"
+                                            aria-label="Close">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

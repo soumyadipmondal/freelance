@@ -1,0 +1,646 @@
+@import "../../site/_variables.scss";
+
+.cmp-compareProviders {
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  transition: .25s ease-in-out;
+  transform: translateY(100%);
+
+  &.slide-up {
+    transform: translateY(0);
+  }
+
+  .underlay {
+    background-color: $primary-white;
+    opacity: 0.95;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .compare-section {
+    max-width: $container-max-width;
+    padding: $mobile-padding-x-small;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .compare-heading {
+    display: none;
+  }
+
+  .label {
+    color: $secondary-blue-dark;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .compare-btn-block {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .clear-compare {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 50%;
+
+    button {
+      color: $primary-grey-dark;
+
+      &:hover {
+        color: $primary-blue-light;
+      }
+    }
+  }
+
+  .compare-all {
+    color: $primary-white;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $primary-blue-light;
+    text-align: center;
+    padding: 10px 30px;
+    height: 40px;
+    border: none;
+    border-radius: 0;
+    width: 50%;
+
+    &:hover {
+      background-color: #0099cc;
+      transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      box-shadow: 0 0 20px -5px rgba(0, 153, 204, 0.5);
+    }
+  }
+
+  .container-fluid:first-child {
+
+    .row {
+      flex-wrap: nowrap;
+      overflow: auto hidden;
+      padding: 3px 3px 15px;
+      height: 90px;
+    }
+  }
+
+  .container-fluid:last-child {
+
+    .row {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .col {
+    height: 70px;
+    min-width: 145px;
+    border-radius: 2px;
+    background-color: $secondary-grey;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.selected {
+      padding: 10px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+      background-color: $primary-white;
+    }
+
+    .close {
+      color: $secondary-blue-dark;
+      font-size: 16px;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .cmp-compareProviders_icon {
+    text-align: center;
+    margin-top: 5px;
+
+    img {
+      height: 26px;
+      width: 26px;
+      margin-right: -10px;
+    }
+  }
+
+  .cmp-compareProviders_provider {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.compareProviders {
+
+  .generic-modal {
+
+    &.modal {
+      padding-right: 0 !important;
+    }
+
+    .modal-dialog {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0;
+    }
+
+    .modal-content {
+      height: 100%;
+    }
+
+    .modal-header {
+      padding: 15px;
+      border-bottom: none;
+      background-color: $secondary-blue-dark;
+      border-radius: 0;
+
+      h2 {
+        color: $primary-white;
+        margin-bottom: 15px;
+      }
+
+      .close {
+        color: $primary-white;
+        padding: 15px;
+        margin: -16px -16px -16px 25px;
+        opacity: 1;
+
+        &:hover {
+          color: $primary-white;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 0;
+    }
+
+    .modal-header_block,
+    .modal-body_block,
+    .modal-body_footer {
+      max-width: $container-max-width;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .modal-body_block {
+      flex-direction: column;
+    }
+
+    .modal-body_footer {
+      display: flex;
+      margin: 15px auto;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.modal-body_main {
+  background-color: $secondary-blue-light;
+
+  .cmp-compareProvider_main-info {
+    display: flex;
+    padding: 15px 0;
+    margin: 0 auto;
+    max-width: $container-max-width;
+  }
+
+  .cmp-compareProvider_service-label,
+  .cmp-compareProvider_plan-label,
+  .cmp-compareProvider_member-label {
+    color: $primary-grey-dark;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .cmp-compareProvider_service-name,
+  .cmp-compareProvider_service-name_mobile,
+  .cmp-compareProvider_plan-name,
+  .cmp-compareProvider_member-name {
+    color: $primary-black;
+    font-size: 14px;
+  }
+}
+
+.modal-body_block {
+
+  .cmp-compareProvider_cost-block {
+
+    button {
+      padding: 9px 15px;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  .btn.btn-link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    position: relative;
+    padding: 21px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    color: $primary-black;
+    background-color: $primary-white;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.collapsed {
+      .accordion-icon.fal {
+        &:after {
+          content: '\f078';
+        }
+      }
+    }
+
+    .accordion-icon.fal {
+      color: $primary-blue-light;
+      font-size: 20px;
+      font-weight: 500;
+      margin-right: 15px;
+
+      &:after {
+        content: '\f077';
+      }
+    }
+  }
+
+  .accordion-header {
+    background-color: $primary-white;
+    position: sticky;
+    top: 254px;
+    z-index: 1;
+  }
+
+  .accordion-body {
+
+    .row {
+      font-size: 14px;
+      margin: 0;
+      flex-wrap: nowrap;
+
+      .col-md-3 {
+        padding: 18px 15px;
+
+        &:not(:last-child) {
+          border-right: 1px solid $primary-grey-light;
+        }
+      }
+    }
+  }
+
+  .accordion-info {
+    color: $primary-white;
+    font-size: 16px;
+
+    >div {
+      padding: 7px 15px;
+      background-color: $secondary-blue-dark;
+    }
+  }
+}
+
+.cmp-compareProvider_wrapper {
+  display: flex;
+  border-bottom: 1px solid $primary-grey-light;
+  z-index: 2;
+  background-color: white;
+
+  &.sticky-wrapper {
+    position: sticky;
+    top: 0;
+
+    .cmp-compareProvider_icon {
+      display: block;
+    }
+
+    .cmp-compareProvider_cost-block {
+
+      button {
+        display: block;
+      }
+    }
+  }
+
+  .cmp-compareProvider_icon {
+    border: 1px solid $primary-grey-light;
+    border-radius: 50%;
+    display: flex;
+    margin-bottom: $mobile-padding-x-small;
+    width: 97px;
+    height: 97px;
+
+    img {
+      height: 95px;
+      width: 95px;
+      padding: 25px;
+    }
+  }
+
+  .col-md-3 {
+    padding: 15px;
+    margin: 15px 0;
+
+    &:not(:last-child) {
+      border-right: 1px solid $secondary-grey;
+    }
+  }
+
+  .cmp-compareProvider_icon-heading {
+
+    .close {
+      font-size: 24px;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .cmp-compareProvider_heading {
+    color: $primary-black;
+    margin-top: 0;
+  }
+
+  .cmp-compareProvider_address {
+    font-size: 14px;
+    color: $primary-grey-dark;
+  }
+
+  .cmp-compareProvider_cost-headline {
+    font-size: 12px;
+    color: $primary-grey-dark;
+    margin-top: 15px;
+  }
+
+  .cmp-compareProvider_cost-procedure {
+    margin: 10px 0 0;
+
+    a {
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    i {
+      font-size: 12px;
+    }
+  }
+}
+
+.cmp-compareProviders_info-wrapper {
+
+  >div {
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $primary-grey-light;
+    }
+  }
+}
+
+@media (max-width: ($tablet)-1) {
+
+  .modal-body_main {
+    position: sticky;
+    left: 0;
+
+    .cmp-compareProvider_main-info {
+
+      >div:not(:first-child) {
+        display: none;
+      }
+
+      .cmp-compareProvider_service-name {
+        display: none;
+      }
+
+      .cmp-compareProvider_service-name_mobile {
+        display: block;
+      }
+    }
+  }
+
+  .cmp-compareProvider_wrapper {
+    .cmp-compareProvider_icon {
+      width: 37px;
+      height: 37px;
+
+      img {
+        width: 35px;
+        height: 35px;
+        padding: 7px;
+      }
+    }
+  }
+
+  .cmp-compareProviders_info-wrapper {
+    position: relative;
+  }
+
+  .modal-body_block {
+    min-width: 700px;
+
+    .btn.btn-link {
+      min-width: 375px;
+    }
+
+    .cmp-compareProviders_info-wrapper {
+
+      >div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .accordion-header {
+      left: 0;
+      width: 0;
+    }
+
+    .accordion-body {
+
+      >div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .accordion-info {
+      position: sticky;
+      left: 0;
+      width: 0;
+
+      >div {
+        width: 375px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .cmp-compareProviders {
+
+    .compare-section {
+      padding-right: 30px;
+      padding-left: 30px;
+      flex-direction: column-reverse;
+    }
+
+    .compare-heading {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .container-fluid:first-child {
+
+      .row {
+        padding-top: 15px;
+      }
+    }
+
+    .compare-btn-block {
+      justify-content: flex-end;
+    }
+  }
+
+  .modal-body_main {
+
+    .cmp-compareProvider_service-name,
+    .cmp-compareProvider_service-name_mobile,
+    .cmp-compareProvider_plan-name,
+    .cmp-compareProvider_member-name {
+      font-size: 18px;
+    }
+
+    .cmp-compareProvider_service-name_mobile {
+      display: none;
+    }
+
+  }
+
+  .cmp-compareProvider_wrapper {
+
+    .cmp-compareProvider_icon {
+      border: 1px solid $primary-grey-light;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: $mobile-padding-x-small;
+      width: 97px;
+      height: 97px;
+
+      img {
+        height: 95px;
+        width: 95px;
+        padding: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop) and (min-width: $tablet) {
+
+  .cmp-compareProvider_wrapper {
+
+    .cmp-compareProvider_icon {
+      width: 57px;
+      height: 57px;
+
+      img {
+        width: 55px;
+        height: 55px;
+        padding: 12px;
+      }
+    }
+  }
+
+  .modal-body_block {
+
+    .accordion-header {
+      top: 297px;
+    }
+  }
+}
+
+@media (min-width: ($desktop)+1) {
+
+  .cmp-compareProviders {
+
+    .compare-section {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .compareProviders {
+
+    .generic-modal {
+
+      .modal-header {
+
+        h2 {
+          margin: 50px 0;
+        }
+      }
+    }
+  }
+
+  .modal-body_main {
+
+    .cmp-compareProvider_main-info {
+      padding: 30px 0;
+    }
+  }
+
+  .modal-body_block {
+
+    .accordion-header {
+      top: 297px;
+    }
+
+    .btn.btn-link {
+      padding: 21px 0;
+    }
+  }
+  .cmp-compareProvider_wrapper {
+
+    .col-md-3 {
+      padding: 30px;
+      margin: 30px 0;
+    }
+  }
+}

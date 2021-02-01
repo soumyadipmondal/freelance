@@ -153,7 +153,12 @@ module.exports = merge(common, {
             filename: 'episodicAccordian.html',
             template: path.resolve(__dirname, SOURCE_ROOT + '/components/episodicAccordian/episodicAccordian.html'),
             inject: 'head'
-        })
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'compareProviders.html',
+            template: path.resolve(__dirname, SOURCE_ROOT + '/components/compareProviders/compareProviders.html'),
+            inject: 'head'
+        }),
     ],
     devServer: {
         inline: true,
