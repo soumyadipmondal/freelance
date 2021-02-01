@@ -48,18 +48,20 @@
                             <section class="cmp-providerResultList">
                                 <div class="cmp-providerResultList_filter-container">
                                     <div class="cmp-providerResultList_sort-location-block">
-                                        <button class="cmp-providerResultList_sort-block" data-toggle="modal"
-                                            data-target=".sort-container" type="button">
-                                            <div class="sort-selected">
-                                                <i class="fas fa-sort" aria-hidden="true"></i>
-                                                <div>
-                                                    <span class="label">Sort By</span>
-                                                    <span class="sort">Cost (Low to High)</span>
+                                        <div class="cmp-providerResultList_sort-block-wrapper">
+                                            <button class="cmp-providerResultList_sort-block" data-toggle="modal"
+                                                data-target=".sort-container" type="button">
+                                                <div class="sort-selected">
+                                                    <i class="fas fa-sort" aria-hidden="true"></i>
+                                                    <div>
+                                                        <span class="label">Sort By</span>
+                                                        <span class="sort">Cost (Low to High)</span>
+                                                    </div>
+                                                    <i class="fas fa-caret-down" aria-hidden="true"></i>
                                                 </div>
-                                                <i class="fas fa-caret-down" aria-hidden="true"></i>
-                                            </div>
+                                            </button>
                                             <ul class="sort-list" role="listbox" tabindex="0">
-                                                <li class="sort-item selected" tabindex="-1" role="option"
+                                                <li class="sort-item selected" role="option"
                                                     aria-selected="true">
                                                     <span>Cost (Low to High)</span>
                                                     <i class="fal fa-check" aria-hidden="true"></i>
@@ -74,7 +76,7 @@
                                                     <span>Reviews (Highest First)</span>
                                                 </li>
                                             </ul>
-                                        </button>
+                                        </div>
                                         <button class="cmp-providerResultList_location-block" data-toggle="modal"
                                             data-target=".location-container" type="button">
                                             <div class="location-selected">

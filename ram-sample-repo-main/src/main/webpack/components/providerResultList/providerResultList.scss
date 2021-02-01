@@ -521,7 +521,7 @@
   .sort-list {
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: 17.8%;
     background-color: $primary-white;
     position: absolute;
     border-top: 1px solid $primary-grey-light;
@@ -1215,5 +1215,11 @@
         width: 95px;
       }
     }
+  }
+}
+
+@media (-ms-high-contrast: none){
+  .sort-list{
+    top: 66px
   }
 }
